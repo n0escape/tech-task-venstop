@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Getting data from form
     // Validate and sanitize data
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    $mail = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_EMAIL);
+    $userEmail = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_EMAIL);
     $privacyPolicy = isset($_POST['privacy_policy']) ? 'Yes' : 'No';
 
     // Enable exceptions
@@ -28,6 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password = $_ENV['MAIL_PASSWORD'];
         $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
 
+        // Codding text of mail
+        $mail->CharSet = 'UTF-8';
+
         // Sender and recipient settings
         $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
         $mail->addAddress($_ENV['MAIL_TO_ADDRESS']);
@@ -35,8 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Sending message to email
         $mail->isHTML(true);
         $mail->Subject = 'Новий запит з форми';
-        $mail->Body    = 'Надіслані наступні дані:<br>Ім\'я - $name<br>Пошта - $mail<br>Політика конфіденційності - $privacyPolicy';
-
+        $mail->Body    = "Надіслані наступні дані:<br>Ім'я - {$name}<br>Пошта - {$userEmail}<br>Політика конфіденційності - {$privacyPolicy}";
         // Send the email
         if(!$mail->send()) {
             echo "Помилка при відправці письма: {$mail->ErrorInfo}";
