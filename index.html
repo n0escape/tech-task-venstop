@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sifu game</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
 
     </header>
+    <h1 class="sr-only">Sifu - available new game</h1>
     <section class="banner">
 
     </section>
@@ -17,19 +18,41 @@
 
     </section>
     <section class="news">
-
+        <h2>LATEST NEWS &#9679; 消息</h2>
     </section>
     <section class="gallery">
-
+        <h2>GALLERY &#9679; 艺术</h2>
     </section>
     <section class="available">
-
+        <h2>AVAILABLE &#9679; 可用</h2>
     </section>
     <section class="newsletter">
-
-    </section>
-    <section class="followUs">
-
+        <h2>NEWSLETTER &#9679; 通讯</h2>
+        <form action="./send_email.php" method="POST">
+            <div class="input-text">
+                <label for="name">Enter name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-text">
+                <label for="mail">Enter e-mail address</label>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+            
+            <label>
+                <input type="checkbox" name="privacy_policy" required>
+                I agree to the 
+                <a href="https://www.kepler-interactive.com/pages/privacy-policy" 
+                    target="_blank"
+                    title="privacy policy"
+                >
+                    privacy policy 
+                </a>
+                and agree to receive occasional news from Kepler and its studios
+            </label>
+            
+            <button type="submit">subscribe</button>
+        </form>
+        <h3>FOLLOW US</h3>
     </section>
     <footer>
 
