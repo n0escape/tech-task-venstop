@@ -9,6 +9,42 @@
     border: 0;
 }
 
+header,
+header ul {
+    display: flex;
+    justify-content: center;
+}
+
+header > * {
+    flex: 1;
+}
+
+header img {
+    width: 100px;
+    height: 60px;
+    border: 1px solid darkblue;
+}
+
+header ul {
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.buttons > div { 
+    width: 60px;
+    height: 20px;
+    background: #333;
+}
+
 form,
 .input-text {
     display: flex;
