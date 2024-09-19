@@ -1,0 +1,15 @@
+{
+  "name": "tech-task-venstop",
+  "version": "1.0.0",
+  "description": "Еnvironment variables explanation:\r MAIL_HOST - depends on which email is used (e.g. smtp.gmail.com, smtp.mailtrap.io) \r MAIL_USERNAME, MAIL_FROM_ADDRESS and MAIL_TO_ADDRESS are the same email is used\r MAIL_PASSWORD - password from email to acces to smtp\r MAIL_ENCRYPTION - type of encryption for your email connections (ssl or tls)\r MAIL_PORT - port which used in dependece with encryption (ssl = 587 or tls = 465)\r MAIL_FROM_NAME - it's name from who will be the mail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dima Zavadovskyi",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n0escape/tech-task-venstop.git"
+  }
+}
