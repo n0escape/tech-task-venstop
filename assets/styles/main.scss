@@ -1,3 +1,15 @@
+// import partials
 @import 'partials/variables';
 @import 'partials/mixins';
 @import 'partials/base';
+@import 'partials/fonts';
+
+// import components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/home';
+@import 'components/about';
+@import 'components/news';
+@import 'components/gallery';
+@import 'components/contact';
+@import 'components/newsletter';

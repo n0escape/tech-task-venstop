@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -13,6 +17,176 @@ body {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1000000;
+}
+
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-Thin.woff2) format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-ExtraLight.woff2) format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-ExtraBold.woff2) format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MacPawFixel";
+  src: url(/assets/fonts/MacPawFixel/FixelText-Black.woff2) format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100vw;
+  padding: 8px 50px;
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(20px);
+}
+.header > * {
+  flex: 1;
+}
+.header__logo img {
+  height: 82px;
+  width: 148px;
+}
+.header__nav .header__nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+.header__nav .header__nav-list .header__nav-item .header__nav-link {
+  text-decoration: none;
+  font-family: "MacPawFixel", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(242, 243, 255, 0.5);
+}
+.header__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+}
+.header__buttons .header__lang-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  width: 100px;
+  border: 2px solid #FFFFFF;
+  color: #F2F3FF;
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(20px);
+}
+.header__buttons .header__buy-now-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  width: 172px;
+  padding: 16px 40px;
+  gap: 10px;
+  border: 0px;
+  background: #A40806;
+  font-family: "MacPawFixel", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  leading-trim: both;
+  text-edge: cap;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  color: #FFFFFF;
+}
+
+@media (hover: hover) {
+  .header__nav-link:hover {
+    font-weight: 700;
+    color: #F2F3FF;
+  }
+  .header__lang-button:hover {
+    box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+  }
+  .header__buy-now-button:hover {
+    border: 6px solid #A40806;
+    box-shadow: 0px 0px 30px #A40806;
+    font-weight: 700;
+  }
+}
+@media (hover: none) {
+  .header__nav-link:active {
+    font-weight: 700;
+    color: #F2F3FF;
+  }
+  .header__lang-button:active {
+    box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+  }
+  .header__buy-now-button:active {
+    border: 6px solid #A40806;
+    box-shadow: 0px 0px 30px #A40806;
+    font-weight: 700;
+  }
+}
+.banner {
+  background-image: url("/assets/images/backgrounds/background_home_Sifu.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */

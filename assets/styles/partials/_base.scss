@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,4 +17,10 @@ body {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000000;
 }
