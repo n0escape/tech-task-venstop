@@ -2,33 +2,6 @@
     @include bg-image("/assets/images/backgrounds/background_home_Sifu.png");
     height: 100vh;
 
-    &__fog-ellipse {
-        position: absolute;
-        top: -100px;
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        max-width: 520px;
-        aspect-ratio: 1;
-        @include center-elem;
-        background: rgba(17, 4, 4, 0.75);
-        filter: blur(75px);
-
-        @media (max-width: 520px) {
-            top: 0;
-        }
-    }
-
-    &__fog-bottom {
-        position: absolute;
-        width: 100%;
-        height: 382px;
-        bottom: 0;
-        left: 0;
-        // deleted rotate -180deg and fix gradient 180deg, as a result 0deg
-        background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
-    }
-
     &__content {
         position: relative;
         width: 100%;
@@ -36,6 +9,33 @@
         overflow: hidden;
         // deleted rotate -180deg and fix gradient 180deg, as a result 0deg
         background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+
+        &__fog-ellipse {
+            position: absolute;
+            top: -100px;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            max-width: 520px;
+            aspect-ratio: 1;
+            @include center-elem;
+            background: rgba(17, 4, 4, 0.75);
+            filter: blur(75px);
+    
+            @media (max-width: 520px) {
+                top: 0;
+            }
+        }
+    
+        &__fog-bottom {
+            position: absolute;
+            width: 100%;
+            height: 382px;
+            bottom: 0;
+            left: 0;
+            // deleted rotate -180deg and fix gradient 180deg, as a result 0deg
+            background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+        }
 
         &__logo-image {
             position: absolute;
