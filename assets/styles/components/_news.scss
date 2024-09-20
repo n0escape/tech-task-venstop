@@ -1,0 +1,115 @@
+.news {
+    @include bg-image("/assets/images/backgrounds/news_bg.png");
+    @include flex-center;
+    flex-direction: column;
+    text-wrap: wrap;
+    gap: 68px;
+    padding: 106px 120px 90px;
+
+    &__content {
+        @include flex-row;
+        gap: 100px;
+
+        & * {
+            flex: 1;
+        }
+
+        &__latest {
+            max-width: 100%;
+            img {
+                width: 100%;
+                max-width: 580px;
+            }
+        }
+
+        &__feed {
+            width: 100%;
+            max-width: 500px;
+            height: 600px;
+
+            &-item {
+                width: 100%;
+                padding: 0 30px;
+                border-left: 4px solid #A40806;
+
+                &-container {
+                    @include flex-column;
+                    align-items: flex-start;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        /* identical to box height */
+    }
+
+    &__description {
+        @include flex-column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 100%;
+        /* or 35px */
+        leading-trim: both;
+        text-edge: cap;
+
+        &-latest {
+            // font-weight: 700;
+            font-size: 45px;
+            // line-height: 100%;
+            /* or 45px */
+            leading-trim: both;
+            text-edge: cap;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    &__info {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 125%;
+        /* or 22px */
+        leading-trim: both;
+        text-edge: cap;
+
+        // croped text by elipsis
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        /* identical to box height, or 18px */
+        text-decoration-line: underline;
+    }
+
+    p, h3 {
+        color: #FCFBF9;
+    }
+
+    a {
+        color: #FFFFFF;
+    }
+
+    .swiper-scrollbar {
+        --swiper-scrollbar-bg-color: #FFFFFF1A;
+        --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
+
+        --swiper-scrollbar-size: 4px;
+        --swiper-scrollbar-top: auto;
+    }
+}

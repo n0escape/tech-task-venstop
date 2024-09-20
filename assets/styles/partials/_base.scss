@@ -1,5 +1,11 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+
+    //font setup
+    font-family: 'MacPawFixel';
+    font-style: normal;
 }
 
 body {
@@ -24,4 +30,17 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000000;
+}
+
+h2 {
+    font-family: 'MacPawFixel';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 103px;
+    leading-trim: both;
+    text-edge: cap;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FCFBF9;
 }

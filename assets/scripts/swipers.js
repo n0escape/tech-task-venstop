@@ -11,4 +11,14 @@ export const initializeSwiper = () => {
             clickable: true,
         },
     });
+    const swiperNews = new Swiper(".news__content__feed", {
+        direction: "vertical",
+        slidesPerView: "auto",
+        freeMode: true,
+        spaceBetween: 65,
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        mousewheel: true,
+      });
 }
