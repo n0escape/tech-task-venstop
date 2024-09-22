@@ -40,8 +40,10 @@ h2 {
   leading-trim: both;
   text-edge: cap;
   text-align: center;
-  letter-spacing: 0.02em;
   color: #FCFBF9;
+}
+h2 span {
+  font-weight: 100;
 }
 
 .swiper-pagination {
@@ -500,6 +502,9 @@ h2 {
   /* identical to box height, or 18px */
   text-decoration-line: underline;
 }
+.news h2 {
+  letter-spacing: 0.02em;
+}
 .news p, .news h3 {
   color: #FCFBF9;
 }
@@ -523,7 +528,7 @@ h2 {
 
 .gallery {
   background-color: #111111;
-  padding: 110px 120px 86px;
+  padding: 110px 82px 86px;
   position: relative;
 }
 .gallery__fog_red {
@@ -540,13 +545,15 @@ h2 {
 .gallery__switcher {
   display: flex !important;
   flex-direction: column;
-  width: 100%;
+  gap: 48px;
 }
 .gallery__switcher__header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
+  padding: 0 38px;
 }
 .gallery__switcher__header > * {
   flex: 1;
@@ -554,16 +561,22 @@ h2 {
 .gallery__switcher__header__controls {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
 }
 .gallery__switcher__header__controls > .swiper-pagination,
 .gallery__switcher__header__controls > .swiper-scrollbar {
-  position: relative !important;
+  position: unset !important;
+  width: 100% !important;
 }
 .gallery__switcher__header__controls > .swiper-pagination {
   display: flex !important;
   justify-content: space-between;
+  width: 100% !important;
 }
 .gallery__switcher__header__controls > .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 !important;
   text-align: center;
   font-weight: 700;
   font-size: 24px;
@@ -582,7 +595,7 @@ h2 {
   --swiper-scrollbar-bg-color: rgba(255, 255, 255, 0.1);
   --swiper-scrollbar-drag-bg-color: #fff;
   --swiper-scrollbar-size: 4px;
-  position: relative;
+  left: 0;
 }
 .gallery__switcher__header__controls > .swiper-scrollbar .swiper-scrollbar-drag > .additional-scrollbar {
   position: absolute;
@@ -594,12 +607,8 @@ h2 {
   z-index: 1;
 }
 .gallery__switcher__header h2 {
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 103px;
-  leading-trim: both;
-  text-edge: cap;
-  color: #FCFBF9;
+  line-height: 52px;
+  text-align: start;
 }
 .gallery__switcher__header .swiper-pagination-bullet {
   width: auto;
@@ -613,7 +622,7 @@ h2 {
 .gallery__switcher__inner {
   width: 100%;
   height: 100%; /* Убедитесь, что высота позволяет отображение пагинации */
-  position: relative !important;
+  position: static !important;
 }
 .gallery__switcher__inner_fog_black-sides {
   position: absolute;
@@ -624,7 +633,6 @@ h2 {
 }
 .gallery__switcher__inner > .swiper-wrapper {
   padding-bottom: 88px;
-  padding-right: 38px;
 }
 .gallery__switcher__inner > .swiper-wrapper .swiper-slide {
   height: 337px;
@@ -643,22 +651,19 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% + 76px);
-  height: calc(100% - 88px);
   position: absolute;
   top: 0;
-  left: -38px;
-  overflow: visible;
+  width: 100%;
+  height: calc(100% - 88px);
 }
 .gallery__switcher__inner__button-navigation .swiper-button-next,
 .gallery__switcher__inner__button-navigation .swiper-button-prev {
-  position: unset !important;
-  width: 76px !important;
-  height: 76px !important;
+  position: relative;
   top: unset !important;
   bottom: unset !important;
-  left: unset !important;
-  background: aqua;
+  width: 76px;
+  height: 76px;
+  background: #111111;
   z-index: 50;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -668,9 +673,6 @@ h2 {
 }
 .gallery__switcher__inner__button-navigation .swiper-button-next::after,
 .gallery__switcher__inner__button-navigation .swiper-button-prev::after {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #FFFFFF;
   font-size: 24px;
   line-height: 11px;
@@ -709,6 +711,20 @@ h2 {
 }
 .gallery .swiper, .gallery .swiper-wrapper, .gallery .swiper-slide {
   background: transparent;
+}
+
+.container {
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 0 38px;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+:root {
+  --swiper-navigation-sides-offset: -38px; /* offset for navigation */
 }
 
 /*# sourceMappingURL=main.css.map */

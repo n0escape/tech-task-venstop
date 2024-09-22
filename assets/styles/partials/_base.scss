@@ -42,8 +42,11 @@ h2 {
     leading-trim: both;
     text-edge: cap;
     text-align: center;
-    letter-spacing: 0.02em;
     color: #FCFBF9;
+
+    span {
+        font-weight: 100;
+    }
 }
 
 .swiper-pagination {

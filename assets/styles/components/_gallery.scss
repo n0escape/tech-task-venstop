@@ -3,10 +3,12 @@ $pagination-circle-size: 20px;
 $padding-wrapper-bottom: 68px;
 $fixed-padding-wrapper-bottom: $pagination-circle-size + $padding-wrapper-bottom;
 $button-navigation-size: 76px;
+$navigation-sides-offset: -$button-navigation-size / 2;
+$padding-gallery-container: 120 - (- $navigation-sides-offset);
 
 .gallery {
     background-color: #111111;
-    padding: 110px 120px 86px;
+    padding: 110px $padding-gallery-container 86px;
     position: relative;
 
     &__fog_red {
@@ -24,30 +26,36 @@ $button-navigation-size: 76px;
     &__switcher {
         display: flex !important;
         flex-direction: column;
-        width: 100%;
+        gap: 48px;
 
         &__header {
             @include flex-row;
+            align-items: flex-end;
             flex-wrap: wrap;
+            padding: 0 #{$button-navigation-size / 2};
     
             & > * {
                 flex: 1;
             }
     
             &__controls {
-                display: flex;
-                flex-direction: column;
+                @include flex-column;
+                justify-content: flex-end;
+                gap: 16px;
 
                 > .swiper-pagination,
                 > .swiper-scrollbar {
-                    position: relative !important;
+                    position: unset !important;
+                    width: 100% !important;
                 }
 
                 > .swiper-pagination {
                     display: flex !important;
                     justify-content: space-between;
+                    width: 100% !important;
 
                     .swiper-pagination-bullet {
+                        margin: 0 !important;
                         text-align: center;
                         font-weight: 700;
                         font-size: 24px;
@@ -69,7 +77,7 @@ $button-navigation-size: 76px;
                     --swiper-scrollbar-bg-color: rgba(255, 255, 255, 0.1);
                     --swiper-scrollbar-drag-bg-color: #fff;
                     --swiper-scrollbar-size: 4px;
-                    position: relative;
+                    left: 0;
 
                     .swiper-scrollbar-drag {
 
@@ -88,12 +96,9 @@ $button-navigation-size: 76px;
             }
 
             h2 {
-                font-weight: 700;
-                font-size: 75px;
-                line-height: 103px;
-                leading-trim: both;
-                text-edge: cap;
-                color: #FCFBF9;
+                line-height: 52px;
+                // height should be 52px but in maket 103.5px
+                text-align: start;
             }
 
             .swiper-pagination-bullet {
@@ -111,8 +116,7 @@ $button-navigation-size: 76px;
         &__inner {
             width: 100%;
             height: 100%; /* Убедитесь, что высота позволяет отображение пагинации */
-            position: relative !important;
-
+            position: static !important;
             &_fog_black-sides {
                 position: absolute;
                 width: 100%;
@@ -123,7 +127,6 @@ $button-navigation-size: 76px;
 
             > .swiper-wrapper {
                 padding-bottom: $fixed-padding-wrapper-bottom;
-                padding-right: 38px;
                 
                 .swiper-slide {
                     height: 337px;
@@ -137,28 +140,23 @@ $button-navigation-size: 76px;
                     }
                 }
             }
-            
-            &__button-navigation{
+
+            &__button-navigation {
                 @include flex-row;
                 justify-content: space-between;
-                width: calc(100% + $button-navigation-size);
-                height: calc(100% - $fixed-padding-wrapper-bottom);
                 position: absolute;
                 top: 0;
-                left: -$button-navigation-size / 2;
-                overflow: visible;
+                width: 100%;
+                height: calc(100% - $fixed-padding-wrapper-bottom);
 
                 .swiper-button-next, 
                 .swiper-button-prev {
-                    position: unset !important;
-                    width: $button-navigation-size !important;
-                    height: $button-navigation-size !important;
+                    position: relative;
                     top: unset !important;
                     bottom: unset !important;
-                    //calc(-50%-$fixed-padding-wrapper-bottom/2)right: unset !important;
-                    left: unset !important;
-                    // background: #111111;
-                    background: aqua;
+                    @include size($button-navigation-size);
+                    background: #111111;
+                    // background: aqua;
                     z-index: 50;
                     border-radius: 50%;
                     -webkit-border-radius: 50%;
@@ -168,12 +166,12 @@ $button-navigation-size: 76px;
                 }
                 .swiper-button-next::after, 
                 .swiper-button-prev::after {
-                    @include flex-center;
                     color: #FFFFFF;
                     font-size: 24px;
                     line-height: 11px;
                 }
             }
+            
             .swiper-pagination {
                 position: absolute;
                 bottom: 0px !important;
@@ -209,4 +207,17 @@ $button-navigation-size: 76px;
     .swiper, .swiper-wrapper, .swiper-slide {
         background: transparent;
     }
+}
+
+.container{
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 0 #{$button-navigation-size / 2};
+}
+.swiper-container{
+    position: relative;
+}
+
+:root {
+    --swiper-navigation-sides-offset: #{$navigation-sides-offset}; /* offset for navigation */
 }
