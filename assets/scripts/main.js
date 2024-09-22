@@ -23,7 +23,7 @@ const contentToLoad = {
   '#about': 'includes/about.html',
   '#news': 'includes/news.html',
   '#gallery': 'includes/gallery.html',
-  '#contact': 'includes/contact.html',
+  '#availability': 'includes/availability.html',
   '#newsletter': 'includes/newsletter.html'
 };
   

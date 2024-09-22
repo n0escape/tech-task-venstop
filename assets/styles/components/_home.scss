@@ -10,7 +10,7 @@
         // deleted rotate -180deg and fix gradient 180deg, as a result 0deg
         background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
 
-        &__fog-ellipse {
+        &__fog_ellipse {
             position: absolute;
             top: -100px;
             max-width: 100%;
@@ -27,7 +27,7 @@
             }
         }
     
-        &__fog-bottom {
+        &__fog_bottom {
             position: absolute;
             width: 100%;
             height: 382px;

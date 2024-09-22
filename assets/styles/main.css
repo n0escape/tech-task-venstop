@@ -237,7 +237,7 @@ h2 span {
   overflow: hidden;
   background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
 }
-.banner__content__fog-ellipse {
+.banner__content__fog_ellipse {
   position: absolute;
   top: -100px;
   max-width: 100%;
@@ -255,11 +255,11 @@ h2 span {
   filter: blur(75px);
 }
 @media (max-width: 520px) {
-  .banner__content__fog-ellipse {
+  .banner__content__fog_ellipse {
     top: 0;
   }
 }
-.banner__content__fog-bottom {
+.banner__content__fog_bottom {
   position: absolute;
   width: 100%;
   height: 382px;
