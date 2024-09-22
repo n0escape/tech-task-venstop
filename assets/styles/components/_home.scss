@@ -1,6 +1,6 @@
 .banner {
     @include bg-image("/assets/images/backgrounds/background_home_Sifu.png");
-    height: 100vh;
+    height: 720px;
 
     &__content {
         position: relative;
@@ -35,6 +35,7 @@
             left: 0;
             // deleted rotate -180deg and fix gradient 180deg, as a result 0deg
             background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+            z-index: 1;
         }
 
         &__logo-image {
@@ -58,12 +59,13 @@
 
         &__platforms {
             position: absolute;
-            bottom: 80px;
+            bottom: 151px;
             width: 100%;
             // deleted rotate 180deg (no sense)
             background: rgba(17, 17, 17, 0.05);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
+            z-index: 10;
 
             &-container {
                 @include flex-column;

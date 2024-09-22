@@ -228,7 +228,7 @@ h2 span {
   background-image: url("/assets/images/backgrounds/background_home_Sifu.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 720px;
 }
 .banner__content {
   position: relative;
@@ -266,6 +266,7 @@ h2 span {
   bottom: 0;
   left: 0;
   background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+  z-index: 1;
 }
 .banner__content__logo-image {
   position: absolute;
@@ -291,11 +292,12 @@ h2 span {
 }
 .banner__content__platforms {
   position: absolute;
-  bottom: 80px;
+  bottom: 151px;
   width: 100%;
   background: rgba(17, 17, 17, 0.05);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
+  z-index: 10;
 }
 .banner__content__platforms-container {
   display: flex;
@@ -725,6 +727,53 @@ h2 span {
 
 :root {
   --swiper-navigation-sides-offset: -38px; /* offset for navigation */
+}
+
+.availability {
+  width: 100%;
+  margin-top: -34px;
+  position: relative;
+  padding: 55px 275px 161px;
+  background-image: url("/assets/images/backgrounds/availability_bg.png");
+  background-size: cover;
+  background-position: center;
+}
+.availability__fog_top {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 325px;
+  background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+}
+.availability__fog_bottom {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 238px;
+  background: linear-gradient(0, #111111 0%, rgba(17, 17, 17, 0) 100%);
+}
+.availability__content {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 69px;
+}
+.availability__content__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.availability__content__links img {
+  height: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */
