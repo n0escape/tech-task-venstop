@@ -3,10 +3,12 @@
     height: 570px; /* или любое другое значение */
     position: relative; /* важно для правильного позиционирования */
     overflow: hidden;
+    --swiper-pagination-bottom: 40px;
     
     &__wrapper {
         width: 100%;
         height: 100%;
+
         &__slide {
             display: flex !important;
             justify-content: flex-start;

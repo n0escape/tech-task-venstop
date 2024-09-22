@@ -109,7 +109,20 @@
         --swiper-scrollbar-bg-color: #FFFFFF1A;
         --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
 
+
         --swiper-scrollbar-size: 4px;
         --swiper-scrollbar-top: auto;
+        
+        &-drag {
+
+            > .additional-scrollbar {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                filter: blur(2px);
+                background: rgba(255, 255, 255, 0.5);
+                -webkit-filter: blur(2px);
+}
+        }
     }
 }

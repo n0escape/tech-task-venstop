@@ -35,6 +35,10 @@
                     line-height: 25px;
 
                     color: rgba(242, 243, 255, 0.5);
+                    &:hover {
+                        font-weight: 700;
+                        color: #F2F3FF;
+                    }
                 }
             }
         }
