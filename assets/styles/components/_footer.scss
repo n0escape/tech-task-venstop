@@ -1,0 +1,21 @@
+.footer {
+    @include flex-column;
+    padding: 0 120px 95px;
+    gap: 36px;
+    
+    &__line {
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(164, 8, 6, 0) 0%, #A40806 46.35%, rgba(164, 8, 6, 0) 100%);
+    }
+    
+    &__rights {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        leading-trim: both;
+        text-edge: cap;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+    }
+}
