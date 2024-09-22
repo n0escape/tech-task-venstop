@@ -1,28 +1,96 @@
-<div>
-    <h2>NEWSLETTER &#9679; 通讯</h2>
-    <form action="./send_email.php" method="POST">
-        <div class="input-text">
-            <label for="name">Enter name</label>
-            <input type="text" id="name" name="name" required>
+<div class="newsletter">
+    <div class="newsletter__fog_red"></div>
+    <div class="newsletter__content">
+        <h2>NEWSLETTER &#9679; <span>通讯</span></h2>
+        <form class="newsletter__content__subscription-form"
+            action="./send_email.php" 
+            method="POST"
+        >
+            <div class="newsletter__content__subscription-form__input-text-group">
+                <input class="input-field" type="text" id="name" name="name" placeholder=" " required>
+                <label class="label-text" for="name">Enter name</label>
+            </div>
+            <div class="newsletter__content__subscription-form__input-text-group">
+                <input class="input-field" type="email" id="mail" name="mail" placeholder=" " required>
+                <label class="label-field" for="mail">Enter e-mail address</label>
+            </div>
+            <label class="newsletter__content__subscription-form__privacy-policy" for="tttt">
+                <input id="tttt" itype="checkbox" name="privacy_policy" required>
+                I agree to the 
+                <a href="https://www.kepler-interactive.com/pages/privacy-policy" 
+                    target="_blank"
+                    title="privacy policy"
+                >   
+                    privacy policy 
+                </a>
+                and agree to receive occasional news from Kepler and its studios
+            </label>
+            <button type="submit">subscribe</button>
+        </form>
+        <div class="newsletter__content__follow-links">
+            <h3>FOLLOW US</h3>
+            <div class="newsletter__content__follow-links__wrapper">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="/assets/images/icons/follow-facebook-icon.png"
+                                alt="Follow us on facebook"
+                                title="Follow us on facebook"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/assets/images/icons/follow-twitter-icon.png"
+                                alt="Follow us on twitter"
+                                title="Follow us on twitter"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/assets/images/icons/follow-youtube-icon.png"
+                                alt="Follow us on youtube"
+                                title="Follow us on youtube"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/assets/images/icons/follow-reddit-icon.png"
+                                alt="Follow us on reddit"
+                                title="Follow us on reddit"
+                            >
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="/assets/images/icons/follow-sloclap-icon.png"
+                                alt="Sloclap icon"
+                                title="Sloclap icon"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/assets/images/icons/follow-kepler-icon.png"
+                                alt="Kepler icon"
+                                title="Kepler icon"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/assets/images/icons/follow-unreal-icon.png"
+                                alt="Unreal icon"
+                                title="Unreal icon"
+                            >
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="input-text">
-            <label for="mail">Enter e-mail address</label>
-            <input type="email" id="mail" name="mail" required>
-        </div>
-        
-        <label>
-            <input type="checkbox" name="privacy_policy" required>
-            I agree to the 
-            <a href="https://www.kepler-interactive.com/pages/privacy-policy" 
-                target="_blank"
-                title="privacy policy"
-            >
-                privacy policy 
-            </a>
-            and agree to receive occasional news from Kepler and its studios
-        </label>
-        
-        <button type="submit">subscribe</button>
-    </form>
-    <h3>FOLLOW US</h3>
+    </div>
 </div>
