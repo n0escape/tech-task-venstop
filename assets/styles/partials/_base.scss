@@ -38,7 +38,9 @@ h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 75px;
-    line-height: 103px;
+    // height should be 52px but in design 103.5px
+    line-height: 52px;
+    // line-height: 103px;
     leading-trim: both;
     text-edge: cap;
     text-align: center;
