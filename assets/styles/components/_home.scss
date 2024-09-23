@@ -1,6 +1,7 @@
 .banner {
     @include bg-image("/assets/images/backgrounds/home-bg.webp");
     height: 720px;
+    // TODO: check media in fog_ellipse
 
     &__content {
         position: relative;
@@ -66,7 +67,7 @@
             -webkit-backdrop-filter: blur(25px);
             z-index: 10;
 
-            &-container {
+            &__container {
                 @include flex-column;
                 gap: 24px;
                 padding: 24px 0;
@@ -100,10 +101,27 @@
                 }
 
                 img {//TODO: decrease depends on media
-                    @include size(56px)
+                    @include size(56px);
                 }
             }
         }
     }
 }
 
+@media (hover: hover) {
+    .banner__content__platforms__container {
+        img:hover {
+            filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+            -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+        }
+    }
+}
+
+@media (hover: none) {
+    .banner__content__platforms__container {
+        img:active {
+            filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+            -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+        }
+    }
+}

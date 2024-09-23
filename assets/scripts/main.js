@@ -1,6 +1,5 @@
-import {
-	initializeSwiper
-} from './swipers.js';
+import { initializeSwiper } from './swipers.js';
+import { inputDarkLogos } from './hoverDarkLink.js'
 
 // func of including html which depends on selector of id
 const loadContent = (selectorOrId, url) => {
@@ -21,6 +20,9 @@ const loadContent = (selectorOrId, url) => {
 			if (swiperElements.length > 0) {
 				initializeSwiper();
 			}
+
+			// input dark logos src
+			inputDarkLogos();
 		})
 		.catch(error => console.error(`Error loading ${selectorOrId}:`, error));
 }
@@ -46,8 +48,7 @@ const loadAllContent = () => {
 
 	// init swiper after load resources
 	Promise.all(loadPromises).then(() => {
-		window.addEventListener('load', initializeSwiper);
-		// initializeSwiper()
+		initializeSwiper();
 	});
 }
 

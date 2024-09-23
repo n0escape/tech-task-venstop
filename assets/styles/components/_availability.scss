@@ -45,3 +45,21 @@
         }
     }
 }
+
+@media (hover: hover) {
+    .availability__content__links {
+        img:hover {
+            filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+            -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+        }
+    }
+}
+
+@media (hover: none) {
+    .availability__content__links {
+        img:active {
+            filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+            -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+        }
+    }
+}
