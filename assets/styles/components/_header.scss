@@ -45,23 +45,54 @@
         gap: 42px;
 
         &__lang {
-            @include flex-center;
-            height: 46px;
-            width: 100px;
-            border: 2px solid #FFFFFF;
-            color: #F2F3FF;
-            background: rgba(17, 17, 17, 0.4);
-            backdrop-filter: blur(20px);
-            @include hover-transition;
             cursor: pointer;
+            position: relative;
+            display: inline-block;
 
-            span {
-                transform: rotate(90deg);
-                -webkit-transform: rotate(90deg);
-                -moz-transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                -o-transform: rotate(90deg);
+            &__current {
+                padding: 10px 30px;
+                @include flex-row;
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 25px;
+                border: 2px solid #FFFFFF;
+                color: #F2F3FF;
+                background: rgba(17, 17, 17, 0.4);
+                backdrop-filter: blur(20px);
+                @include hover-transition;
+
+                span {
+                    font-weight: 300;
+                }
             }
+
+            &__dropdown {
+                display: none;
+                position: absolute;
+                text-align: center;
+                top: 100%;
+                left: 0;
+                color: #F2F3FF;
+                background: rgba(17, 17, 17, .9);
+                padding: 5px 0;
+                min-width: 100%;
+                z-index: 1000;
+                border-radius: 0 0 10px 10px;
+                -webkit-border-radius: 0 0 10px 10px;
+                -moz-border-radius: 0 0 10px 10px;
+                -ms-border-radius: 0 0 10px 10px;
+                -o-border-radius: 0 0 10px 10px;
+
+                &__option {
+                    border-top: 1px solid #FFFFFF;
+                    padding: 10px 30px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .active .header__buttons__lang__dropdown {
+            display: block;
         }
 
         &__buy-now {
@@ -93,7 +124,7 @@
         color: #F2F3FF;
     }
 
-    .header__buttons__lang:hover {
+    .header__buttons__lang__current:hover {
         box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
     }
 
@@ -105,16 +136,16 @@
 }
 
 @media (hover: none) {
-    .header__nav-link:active {
+    .header__nav__list__item__link:active {
         font-weight: 700;
         color: #F2F3FF;
     }
 
-    .header__lang-button:active {
+    .header__buttons__lang__current:active {
         box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
     }
 
-    .header__buy-now-button:active {
+    .header__buttons__buy-now:active {
         border: 6px solid #A40806;
         box-shadow: 0px 0px 30px #A40806;
         font-weight: 700;

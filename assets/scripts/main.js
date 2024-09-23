@@ -1,5 +1,6 @@
 import { initializeSwiper } from './swipers.js';
 import { inputDarkLogos } from './hoverDarkLink.js'
+import { langButtonSwitcher } from './langButton.js'
 
 // func of including html which depends on selector of id
 const loadContent = (selectorOrId, url) => {
@@ -23,6 +24,9 @@ const loadContent = (selectorOrId, url) => {
 
 			// input dark logos src
 			inputDarkLogos();
+
+			// lang button switcher handler
+			langButtonSwitcher();
 		})
 		.catch(error => console.error(`Error loading ${selectorOrId}:`, error));
 }

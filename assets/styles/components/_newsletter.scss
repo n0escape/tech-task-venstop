@@ -74,7 +74,12 @@ $checkbox-size: 38px;
                         -moz-transform: translateY(-170%) translateX(-50%);
                         -ms-transform: translateY(-170%) translateX(-50%);
                         -o-transform: translateY(-170%) translateX(-50%);
-                    }
+                        transition: transform 1s ease, background 1s ease 0.1s;
+                        -webkit-transition: transform 1s ease, background 1s ease 0.1s;
+                        -moz-transition: transform 1s ease, background 1s ease 0.1s;
+                        -ms-transition: transform 1s ease, background 1s ease 0.1s;
+                        -o-transition: transform 1s ease, background 1s ease 0.1s;
+}
                 }
 
                 input,
