@@ -11,6 +11,14 @@ const loadContent = (selectorOrId, url) => {
         : document.querySelector(selectorOrId);
 
       targetElement.innerHTML = data;
+
+      // checking if there any div with swiper class
+      const swiperElements = targetElement.querySelectorAll('.swiper');
+      
+      // init Swiper if found div with swiper class
+      if (swiperElements.length > 0) {
+        initializeSwiper();
+      }
     })
     .catch(error => console.error(`Error loading ${selectorOrId}:`, error));
 }
@@ -37,6 +45,7 @@ const loadAllContent = () => {
   // init swiper after load resources
   Promise.all(loadPromises).then(() => {
     window.addEventListener('load', initializeSwiper);
+    // initializeSwiper()
   });
 }
 

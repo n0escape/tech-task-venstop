@@ -248,7 +248,7 @@ h2 span {
 }
 
 .banner {
-  background-image: url("/assets/images/backgrounds/background_home_Sifu.png");
+  background-image: url("/assets/images/backgrounds/home-bg.webp");
   background-size: cover;
   background-position: center;
   height: 720px;
@@ -418,23 +418,23 @@ h2 span {
   padding: 0 120px 0 0;
 }
 .about__wrapper__slide:nth-child(1) {
-  background-image: url("/assets/images/backgrounds/about_bg 1.png");
+  background-image: url("/assets/images/backgrounds/about-bg-1.webp");
   background-size: cover;
   background-position: center;
 }
 .about__wrapper__slide:nth-child(2) {
-  background-image: url("/assets/images/backgrounds/about_bg 2.png");
+  background-image: url("/assets/images/backgrounds/about-bg-2.webp");
   background-size: cover;
   background-position: center;
 }
 .about__wrapper__slide:nth-child(3) {
-  background-image: url("/assets/images/backgrounds/about_bg 3.png");
+  background-image: url("/assets/images/backgrounds/about-bg-3.webp");
   background-size: cover;
   background-position: center;
 }
 
 .news {
-  background-image: url("/assets/images/backgrounds/news_bg.png");
+  background-image: url("/assets/images/backgrounds/news-bg.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -755,7 +755,7 @@ h2 span {
   margin-top: -34px;
   position: relative;
   padding: 89px 275px 161px;
-  background-image: url("/assets/images/backgrounds/availability_bg.png");
+  background-image: url("/assets/images/backgrounds/availability-bg.webp");
   background-size: cover;
   background-position: center;
 }

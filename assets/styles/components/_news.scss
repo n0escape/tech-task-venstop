@@ -1,5 +1,5 @@
 .news {
-    @include bg-image("/assets/images/backgrounds/news_bg.png");
+    @include bg-image("/assets/images/backgrounds/news-bg.webp");
     @include flex-center;
     flex-direction: column;
     text-wrap: wrap;
