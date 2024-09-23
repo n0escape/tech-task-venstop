@@ -27,13 +27,17 @@ const contentToLoad = {
   '#newsletter': 'includes/newsletter.html'
 };
   
-  // loop for including components and init swipers
-const loadAllContent = async () => {
-  for (const [selectorOrId, url] of Object.entries(contentToLoad)) {
-      await loadContent(selectorOrId, url);
-  }
-  setTimeout(() => initializeSwiper(), 500);
+
+// loop for including components and init swipers
+const loadAllContent = () => {
+  const loadPromises = Object.entries(contentToLoad).map(([selectorOrId, url]) => 
+    loadContent(selectorOrId, url)
+  );
+
+  // init swiper after load resources
+  Promise.all(loadPromises).then(() => {
+    window.addEventListener('load', initializeSwiper);
+  });
 }
 
 window.addEventListener('DOMContentLoaded', loadAllContent);
-  
