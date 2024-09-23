@@ -1,6 +1,7 @@
 import { initializeSwiper } from './swipers.js';
 import { inputDarkLogos } from './hoverDarkLink.js'
 import { langButtonSwitcher } from './langButton.js'
+import { mouseMoveParallax } from './homeMouseMoveParallax.js'
 
 // func of including html which depends on selector of id
 const loadContent = (selectorOrId, url) => {
@@ -16,6 +17,7 @@ const loadContent = (selectorOrId, url) => {
 
 			// checking if there any div with swiper class
 			const swiperElements = targetElement.querySelectorAll('.swiper');
+			const parallaxElements = targetElement.querySelectorAll('.banner__content');
 
 			// init Swiper if found div with swiper class
 			if (swiperElements.length > 0) {
@@ -27,6 +29,9 @@ const loadContent = (selectorOrId, url) => {
 
 			// lang button switcher handler
 			langButtonSwitcher();
+
+			if (parallaxElements) mouseMoveParallax()
+			// init paralax props
 		})
 		.catch(error => console.error(`Error loading ${selectorOrId}:`, error));
 }

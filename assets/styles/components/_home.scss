@@ -8,6 +8,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        @include flex-column;
         // deleted rotate -180deg and fix gradient 180deg, as a result 0deg
         background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
 
@@ -40,10 +41,9 @@
 
         &__logo-image {
             position: absolute;
-            top: 100px;
+            margin-top: 100px;
             width: 100%;
             max-width: 414px;
-            @include center-elem;
         }
 
         &__hero-image {
@@ -59,7 +59,7 @@
 
         &__platforms {
             position: absolute;
-            bottom: 151px;
+            bottom: 100px;
             width: 100%;
             // deleted rotate 180deg (no sense)
             background: rgba(17, 17, 17, 0.05);
