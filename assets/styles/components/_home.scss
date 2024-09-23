@@ -102,6 +102,7 @@
 
                 img {//TODO: decrease depends on media
                     @include size(56px);
+                    @include hover-transition;
                 }
             }
         }

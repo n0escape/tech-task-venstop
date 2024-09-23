@@ -19,26 +19,21 @@
     }
 
     &__nav {
-        .header__nav-list {
+        &__list {
             @include flex-row;
             justify-content: space-between;
             list-style-type: none;
             padding: 0;
 
-            .header__nav-item {
-                .header__nav-link {
+            &__item {
+                &__link {
                     text-decoration: none;
-                    font-family: 'MacPawFixel', sans-serif;
-                    font-style: normal;
                     font-weight: 400;
                     font-size: 18px;
                     line-height: 25px;
 
                     color: rgba(242, 243, 255, 0.5);
-                    &:hover {
-                        font-weight: 700;
-                        color: #F2F3FF;
-                    }
+                    @include hover-transition;
                 }
             }
         }
@@ -49,7 +44,7 @@
         justify-content: flex-end;
         gap: 42px;
 
-        .header__lang-button {
+        &__lang {
             @include flex-center;
             height: 46px;
             width: 100px;
@@ -57,9 +52,20 @@
             color: #F2F3FF;
             background: rgba(17, 17, 17, 0.4);
             backdrop-filter: blur(20px);
+            @include hover-transition;
+            cursor: pointer;
+
+            span {
+                transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+            }
         }
 
-        .header__buy-now-button {
+        &__buy-now {
+            @include hover-transition;  
             @include flex-center;
             height: 46px;
             width: 172px;
@@ -82,16 +88,16 @@
 }
 
 @media (hover: hover) {
-    .header__nav-link:hover {
+    .header__nav__list__item__link:hover {
         font-weight: 700;
         color: #F2F3FF;
     }
 
-    .header__lang-button:hover {
+    .header__buttons__lang:hover {
         box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
     }
 
-    .header__buy-now-button:hover {
+    .header__buttons__buy-now:hover {
         border: 6px solid #A40806;
         box-shadow: 0px 0px 30px #A40806;
         font-weight: 700;
