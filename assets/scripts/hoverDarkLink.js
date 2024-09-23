@@ -12,14 +12,14 @@ const hoverSrcArray = [
 
 export const inputDarkLogos = () => {
 	document.querySelectorAll('.social-logo_dark').forEach((img, index) => {
-		img.src = originalSrcArray[index]; // Устанавливаем оригинальный src
+		img.src = originalSrcArray[index];
 
 		img.addEventListener('mouseenter', () => {
-			img.src = hoverSrcArray[index]; // Меняем на src при наведении
+			img.src = hoverSrcArray[index];
 		});
 
 		img.addEventListener('mouseleave', () => {
-			img.src = originalSrcArray[index]; // Возвращаем оригинальный src
+			img.src = originalSrcArray[index];
 		});
 	});
 }
