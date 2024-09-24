@@ -518,6 +518,10 @@ h2 span {
   .banner__content__hero-image {
     margin: 0 auto;
   }
+  .banner__content__platforms__container img {
+    width: 40px;
+    height: 40px;
+  }
 }
 .about {
   width: 100%;
