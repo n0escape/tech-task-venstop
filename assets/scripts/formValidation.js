@@ -31,6 +31,17 @@ export const formValidation = () => {
                     errorMessage.textContent = ''
                     form.submit();
             }
+            if (errorMessage.textContent !== '') errorMessage.classList.add("alert")
         })
+
+        const clearErrorMessage = () => {
+            errorMessage.textContent = '';
+            errorMessage.classList.remove('alert');
+        };
+    
+        // clear message box if making changes
+        nameInput.addEventListener('input', clearErrorMessage);
+        emailInput.addEventListener('input', clearErrorMessage);
+        termsCheckbox.addEventListener('change', clearErrorMessage);
     }
 }
