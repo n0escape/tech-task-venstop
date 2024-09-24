@@ -433,7 +433,7 @@ h2 span {
   justify-content: flex-start;
   text-align: start;
 }
-.about__wrapper__slide-content {
+.about__wrapper__slide__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -442,7 +442,7 @@ h2 span {
   width: 50%;
   padding-top: 124px;
 }
-.about__wrapper__slide-content h3 {
+.about__wrapper__slide__content h3 {
   text-wrap: wrap;
   text-transform: uppercase;
   font-weight: 700;
@@ -450,18 +450,18 @@ h2 span {
   line-height: 120%;
   /* or 84px */
 }
-.about__wrapper__slide-content-line {
+.about__wrapper__slide__content__line {
   height: 8px;
   width: 100%;
   border: none;
   background: #A40806;
 }
-.about__wrapper__slide-content p {
+.about__wrapper__slide__content p {
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
 }
-.about__wrapper__slide-content h3, .about__wrapper__slide-content p {
+.about__wrapper__slide__content h3, .about__wrapper__slide__content p {
   margin: 0;
   padding: 0 0 0 120px;
   color: #FFFFFF;
@@ -641,6 +641,9 @@ h2 span {
   display: flex !important;
   flex-direction: column;
   gap: 48px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 .gallery__switcher__header {
   display: flex;
@@ -713,22 +716,34 @@ h2 span {
 .gallery__switcher__header .swiper-pagination-bullet-active {
   background: transparent;
 }
-.gallery__switcher__inner {
-  width: 100%;
-  height: 100%; /* Убедитесь, что высота позволяет отображение пагинации */
-  position: static !important;
+.gallery__switcher .swiper, .gallery__switcher .swiper-wrapper, .gallery__switcher .swiper-slide {
+  background: transparent;
 }
-.gallery__switcher__inner_fog_black-sides {
-  position: absolute;
+.gallery__switcher__wrapper__slide__container {
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 0 38px;
+  position: relative;
+}
+.gallery__switcher__wrapper__slide__container__inner {
   width: 100%;
+  height: 100%;
+  position: static !important;
+  /* offset for navigation buttons */
+  --swiper-navigation-sides-offset: -38px;
+}
+.gallery__switcher__wrapper__slide__container__inner__fog_black-sides {
+  pointer-events: none;
+  position: absolute;
+  width: calc(100% - 76px);
   height: calc(100% - 88px);
   z-index: 40;
   background: linear-gradient(90deg, #111111 0%, rgba(17, 17, 17, 0) 48.44%, #111111 100%);
 }
-.gallery__switcher__inner > .swiper-wrapper {
+.gallery__switcher__wrapper__slide__container__inner > .swiper-wrapper {
   padding-bottom: 88px;
 }
-.gallery__switcher__inner > .swiper-wrapper .swiper-slide {
+.gallery__switcher__wrapper__slide__container__inner > .swiper-wrapper .swiper-slide {
   height: 337px;
   width: auto;
   aspect-ratio: 1;
@@ -736,22 +751,22 @@ h2 span {
   justify-content: center;
   align-items: center;
 }
-.gallery__switcher__inner > .swiper-wrapper .swiper-slide video {
+.gallery__switcher__wrapper__slide__container__inner > .swiper-wrapper .swiper-slide video {
   height: 337px;
   width: auto;
 }
-.gallery__switcher__inner__button-navigation {
+.gallery__switcher__wrapper__slide__container__inner__button-navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: calc(100% - 76px);
   height: calc(100% - 88px);
 }
-.gallery__switcher__inner__button-navigation .swiper-button-next,
-.gallery__switcher__inner__button-navigation .swiper-button-prev {
+.gallery__switcher__wrapper__slide__container__inner__button-navigation .swiper-button-next,
+.gallery__switcher__wrapper__slide__container__inner__button-navigation .swiper-button-prev {
   position: relative;
   top: unset !important;
   bottom: unset !important;
@@ -765,60 +780,38 @@ h2 span {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.gallery__switcher__inner__button-navigation .swiper-button-next::after,
-.gallery__switcher__inner__button-navigation .swiper-button-prev::after {
+.gallery__switcher__wrapper__slide__container__inner__button-navigation .swiper-button-next::after,
+.gallery__switcher__wrapper__slide__container__inner__button-navigation .swiper-button-prev::after {
   color: #FFFFFF;
   font-size: 24px;
   line-height: 11px;
 }
-.gallery__switcher__inner .swiper-pagination {
+.gallery__switcher__wrapper__slide__container__inner .swiper-pagination {
   position: absolute;
   bottom: 0px !important;
 }
-.gallery__switcher__inner .swiper-pagination > .swiper-pagination-bullets, .gallery__switcher__inner .swiper-pagination .swiper-pagination-custom, .gallery__switcher__inner .swiper-pagination .swiper-pagination-fraction {
+.gallery__switcher__wrapper__slide__container__inner .swiper-pagination > .swiper-pagination-bullets, .gallery__switcher__wrapper__slide__container__inner .swiper-pagination .swiper-pagination-custom, .gallery__switcher__wrapper__slide__container__inner .swiper-pagination .swiper-pagination-fraction {
   bottom: 0px !important;
 }
-.gallery__switcher .photos .swiper-slide:nth-child(1) {
+.gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(1) {
   background-image: url("/assets/images/content/gallety_photo 1.png");
   background-size: cover;
   background-position: center;
 }
-.gallery__switcher .photos .swiper-slide:nth-child(2) {
+.gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(2) {
   background-image: url("/assets/images/content/gallety_photo 2.png");
   background-size: cover;
   background-position: center;
 }
-.gallery__switcher .photos .swiper-slide:nth-child(3) {
+.gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(3) {
   background-image: url("/assets/images/content/gallety_photo 1.png");
   background-size: cover;
   background-position: center;
 }
-.gallery__switcher .photos .swiper-slide:nth-child(4) {
+.gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(4) {
   background-image: url("/assets/images/content/gallety_photo 2.png");
   background-size: cover;
   background-position: center;
-}
-.gallery .swiper {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.gallery .swiper, .gallery .swiper-wrapper, .gallery .swiper-slide {
-  background: transparent;
-}
-
-.container {
-  max-width: 100%;
-  margin-inline: auto;
-  padding: 0 38px;
-}
-
-.swiper-container {
-  position: relative;
-}
-
-:root {
-  --swiper-navigation-sides-offset: -38px; /* offset for navigation */
 }
 
 .availability {

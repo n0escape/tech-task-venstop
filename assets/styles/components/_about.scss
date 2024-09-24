@@ -14,7 +14,7 @@
             justify-content: flex-start;
             text-align: start;
 
-            &-content {
+            &__content {
                 @include flex-column;
                 text-wrap: wrap;
                 height: 100%;
@@ -30,7 +30,7 @@
                     /* or 84px */
                 }
 
-                &-line {
+                &__line {
                     height: 8px;
                     width: 100%;
                     border: none;
