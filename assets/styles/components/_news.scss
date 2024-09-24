@@ -89,6 +89,7 @@
     }
 
     &__subtitle {
+        height: 24px;
         font-weight: 700;
         font-size: 35px;
         line-height: 100%;
@@ -97,9 +98,8 @@
         text-edge: cap;
 
         &-latest {
-            // font-weight: 700;
+            height: 76px;
             font-size: 45px;
-            // line-height: 100%;
             /* or 45px */
             leading-trim: both;
             text-edge: cap;
@@ -108,6 +108,7 @@
     }
 
     &__info {
+        height: 13px;
         font-weight: 400;
         font-size: 18px;
         line-height: 125%;

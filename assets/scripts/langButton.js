@@ -2,17 +2,8 @@ export const langButtonSwitcher = () => {
     const languageSwitcher = document.querySelector('.header__buttons__lang');
     const languageButton = document.querySelector('.header__buttons__lang__current');
     const options = document.querySelectorAll('.header__buttons__lang__dropdown__option');
-
-    // clone button with cleaning events
-    languageButton.replaceWith(languageButton.cloneNode(true));
-    const newLanguageButton = document.querySelector('.header__buttons__lang__current');
-
     
-    newLanguageButton.addEventListener('click', (event) => {
-        // fix multiple click
-        event.stopPropagation();
-        languageSwitcher.classList.toggle('active');
-    });
+    languageButton.addEventListener('click', () => languageSwitcher.classList.toggle('active'));
 
     options.forEach(option => {
         option.removeEventListener('click', handleLanguageChange);
@@ -27,8 +18,6 @@ export const langButtonSwitcher = () => {
 }
 
 const handleLanguageChange = (event) => {
-    // fix multiple click
-    event.stopPropagation();
     // show selected lang
     const selectedLanguage = event.target.textContent;
     const languageButton = document.querySelector('.header__buttons__lang__current');

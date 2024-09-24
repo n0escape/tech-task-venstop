@@ -3,6 +3,7 @@ import { inputDarkLogos } from './hoverDarkLink.js'
 import { langButtonSwitcher } from './langButton.js'
 import { mouseMoveParallax } from './homeMouseMoveParallax.js'
 import { formValidation } from './formValidation.js'
+import { menuHandler } from './menuHandler.js'
 
 // func of including html which depends on selector of id
 const loadContent = (selectorOrId, url) => {
@@ -28,6 +29,9 @@ const loadContent = (selectorOrId, url) => {
 			// init lang button switcher handler when loaded header
 			if (headerElements.length > 0) langButtonSwitcher();
 
+			// init lang button switcher handler when loaded header
+			if (headerElements.length > 0) menuHandler();
+
 			// init paralax props when loaded home section
 			if (homeElements.length > 0) mouseMoveParallax();
 
@@ -36,6 +40,7 @@ const loadContent = (selectorOrId, url) => {
 
 			// input dark logos src when loaded newsletter section
 			if (newsletterElements.length > 0) inputDarkLogos();
+			
 		})
 		.catch(error => console.error(`Error loading ${selectorOrId}:`, error));
 }

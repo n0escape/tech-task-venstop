@@ -1,6 +1,7 @@
 .header {
     @include flex-row;
     justify-content: space-between;
+    flex-wrap: wrap;
     height: 100px;
     width: 100vw;
     padding: 8px 50px;
@@ -13,9 +14,25 @@
 
     &__logo {
         img {
-            height: 82px;
+            height: auto;
             width: 148px;
         }
+    }
+
+    &__menu-button {
+        flex: 0;
+        display: none;
+        @include size(auto);
+        cursor: pointer;
+        padding: 10px 30px;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 25px;
+        border: 2px solid #FFFFFF;
+        color: #F2F3FF;
+        background: rgba(17, 17, 17, 0.4);
+        backdrop-filter: blur(20px);
+        @include hover-transition;
     }
 
     &__nav {
@@ -91,8 +108,10 @@
             }
         }
 
-        .active .header__buttons__lang__dropdown {
-            display: block;
+        .active {
+            .header__buttons__lang__dropdown {
+                display: block;
+            }
         }
 
         &__buy-now {
@@ -119,6 +138,10 @@
 }
 
 @media (hover: hover) {
+    .header__menu-button:hover {
+        box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+    }
+
     .header__nav__list__item__link:hover {
         font-weight: 700;
         color: #F2F3FF;
@@ -136,6 +159,9 @@
 }
 
 @media (hover: none) {
+    .header__menu-button:active {
+        box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+    }
     .header__nav__list__item__link:active {
         font-weight: 700;
         color: #F2F3FF;
@@ -149,5 +175,92 @@
         border: 6px solid #A40806;
         box-shadow: 0px 0px 30px #A40806;
         font-weight: 700;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .header {
+        padding: 8px 20px;
+        height: auto;
+
+        &__logo {
+            flex: 0;
+            @include size(auto);
+        }
+
+        &__nav {
+            padding: 0 20px;
+        }
+
+        &__buttons {
+            justify-content: space-around;
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .header {
+        padding: 8px 10px;
+        flex-wrap: wrap;
+
+        &__logo {
+            img {
+                height: auto;
+                width: 88px;
+            }
+        }
+
+        &__menu-button {
+            display: block;
+            padding: 4px 16px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        &__nav {
+            display: none;
+            position: absolute;
+            text-align: center;
+            top: 100%;
+            left: 0;
+            background: rgba(17, 17, 17, .6);
+            padding: 5px 0;
+            min-width: 100%;
+            z-index: 1000;
+
+            &__list {
+                border-top: 1px solid #FFFFFF;
+                padding: 8px 12px;
+                cursor: pointer;
+
+                &__item {
+                    &__link {
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: rgba(242, 243, 255, 0.7);
+                    }
+                }
+            }
+                
+        }
+
+        .showList {
+            display: block;
+        }
+
+        &__buttons {
+            display: contents;
+            
+            &__lang {
+                &__current {
+                    padding: 4px 16px;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+            
+            &__buy-now {
+                display: none;
+            }
+        }
     }
 }

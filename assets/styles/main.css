@@ -32,6 +32,7 @@ header {
 }
 
 h2 {
+  height: 52px;
   font-weight: 700;
   font-size: 75px;
   line-height: 52px;
@@ -125,6 +126,7 @@ h2 span {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   height: 100px;
   width: 100vw;
   padding: 8px 50px;
@@ -135,8 +137,28 @@ h2 span {
   flex: 1;
 }
 .header__logo img {
-  height: 82px;
+  height: auto;
   width: 148px;
+}
+.header__menu-button {
+  flex: 0;
+  display: none;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: 10px 30px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  border: 2px solid #FFFFFF;
+  color: #F2F3FF;
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(20px);
+  transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
 }
 .header__nav__list {
   display: flex;
@@ -242,6 +264,9 @@ h2 span {
 }
 
 @media (hover: hover) {
+  .header__menu-button:hover {
+    box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+  }
   .header__nav__list__item__link:hover {
     font-weight: 700;
     color: #F2F3FF;
@@ -256,6 +281,9 @@ h2 span {
   }
 }
 @media (hover: none) {
+  .header__menu-button:active {
+    box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+  }
   .header__nav__list__item__link:active {
     font-weight: 700;
     color: #F2F3FF;
@@ -267,6 +295,74 @@ h2 span {
     border: 6px solid #A40806;
     box-shadow: 0px 0px 30px #A40806;
     font-weight: 700;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 8px 20px;
+    height: auto;
+  }
+  .header__logo {
+    flex: 0;
+    width: auto;
+    height: auto;
+  }
+  .header__nav {
+    padding: 0 20px;
+  }
+  .header__buttons {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 8px 10px;
+    flex-wrap: wrap;
+  }
+  .header__logo img {
+    height: auto;
+    width: 88px;
+  }
+  .header__menu-button {
+    display: block;
+    padding: 4px 16px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .header__nav {
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    background: rgba(17, 17, 17, 0.6);
+    padding: 5px 0;
+    min-width: 100%;
+    z-index: 1000;
+  }
+  .header__nav__list {
+    border-top: 1px solid #FFFFFF;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .header__nav__list__item__link {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(242, 243, 255, 0.7);
+  }
+  .header .showList {
+    display: block;
+  }
+  .header__buttons {
+    display: contents;
+  }
+  .header__buttons__lang__current {
+    padding: 4px 16px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .header__buttons__buy-now {
+    display: none;
   }
 }
 .footer {
@@ -282,6 +378,7 @@ h2 span {
   background: linear-gradient(90deg, rgba(164, 8, 6, 0) 0%, #A40806 46.35%, rgba(164, 8, 6, 0) 100%);
 }
 .footer__rights {
+  height: 13px;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -417,7 +514,7 @@ h2 span {
     -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
   }
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .banner__content__hero-image {
     margin: 0 auto;
   }
@@ -582,6 +679,7 @@ h2 span {
   gap: 30px;
 }
 .news__subtitle {
+  height: 24px;
   font-weight: 700;
   font-size: 35px;
   line-height: 100%;
@@ -590,6 +688,7 @@ h2 span {
   text-edge: cap;
 }
 .news__subtitle-latest {
+  height: 76px;
   font-size: 45px;
   /* or 45px */
   leading-trim: both;
@@ -597,6 +696,7 @@ h2 span {
   letter-spacing: 0.02em;
 }
 .news__info {
+  height: 13px;
   font-weight: 400;
   font-size: 18px;
   line-height: 125%;
@@ -1022,6 +1122,12 @@ h2 span {
   -o-transform: translate(-50%, -50%) rotate(45deg);
 }
 .newsletter__content__subscription-form__privacy-policy label {
+  height: 38px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  leading-trim: both;
+  text-edge: cap;
   color: #FCFBF9;
   margin-left: 14px;
   flex: 1;
@@ -1031,9 +1137,13 @@ h2 span {
   color: #A40806;
 }
 .newsletter__content__subscription-form #form-error-message {
-  color: #FFFFFF;
+  color: #FCFBF9;
+  height: 38px;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 25px;
+  leading-trim: both;
+  text-edge: cap;
   visibility: hidden;
   opacity: 0;
 }

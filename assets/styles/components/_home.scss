@@ -127,11 +127,7 @@
     }
 }
 
-@media (max-width: $tablet) {
-    
-}
-
-@media (max-width: $mobile) {
+@media screen and (max-width: $mobile) {
     .banner__content__hero-image {
         margin: 0 auto;
     }

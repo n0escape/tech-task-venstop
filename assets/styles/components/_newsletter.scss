@@ -90,6 +90,7 @@ $checkbox-size: 38px;
 
                 input,
                 label {
+                    // height: 22px;
                     font-weight: 400;
                     font-size: 32px;
                     line-height: 44px;
@@ -141,6 +142,13 @@ $checkbox-size: 38px;
                 }
 
                 label {
+                    height: 38px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    leading-trim: both;
+                    text-edge: cap;
+
                     color: #FCFBF9;
                     margin-left: 14px;
                     flex: 1;
@@ -153,9 +161,13 @@ $checkbox-size: 38px;
             }
             
             #form-error-message {
-                color: #FFFFFF;
+                color: #FCFBF9;
+                height: 38px;
+                font-weight: 400;
                 font-size: 18px;
-                line-height: 22px;
+                line-height: 25px;
+                leading-trim: both;
+                text-edge: cap;
                 visibility: hidden;
                 opacity: 0;
             }
@@ -199,6 +211,7 @@ $checkbox-size: 38px;
 
 
             h3 {
+                //height: 31px;
                 font-weight: 600;
                 font-size: 45px;
                 line-height: 62px;
