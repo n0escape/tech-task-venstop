@@ -3,19 +3,21 @@
     <div class="newsletter__content">
         <h2>NEWSLETTER &#9679; <span>通讯</span></h2>
         <form class="newsletter__content__subscription-form"
+            id="subscription-form"
             action="./send_email.php" 
             method="POST"
+            novalidate
         >
             <div class="newsletter__content__subscription-form__input-text-group">
-                <input class="input-field" type="text" id="name" name="name" placeholder=" " required>
+                <input class="input-field" type="text" id="input-name" name="name" placeholder=" ">
                 <label class="label-text" for="name">Enter name</label>
             </div>
             <div class="newsletter__content__subscription-form__input-text-group">
-                <input class="input-field" type="email" id="mail" name="mail" placeholder=" " required>
+                <input class="input-field" type="email" id="input-email" name="mail" placeholder=" ">
                 <label class="label-field" for="mail">Enter e-mail address</label>
             </div>
             <div class="newsletter__content__subscription-form__privacy-policy">
-                <input type="checkbox" name="privacy_policy" onchange="console.log(222)" required>
+                <input type="checkbox" id="inpit-privacy" name="privacy_policy">
                 <label>
                     I agree to the 
                     <a href="https://www.kepler-interactive.com/pages/privacy-policy" 
@@ -27,6 +29,7 @@
                     and agree to receive occasional news from Kepler and its studios
                 </label>
             </div>
+            <p id="form-error-message" style="color: red;"></p>
             <button type="submit">subscribe</button>
         </form>
         <div class="newsletter__content__follow-links">

@@ -1,4 +1,4 @@
-export const initializeSwiper = () => {
+export const initializeSwipers = () => {
 	// About
 	const swiperAbout = new Swiper(".about", {
 		speed: 3000,
@@ -16,7 +16,6 @@ export const initializeSwiper = () => {
 
 	// News
 	const swiperNews = new Swiper(".news__content__feed", {
-		// speed: 2000,
 		direction: "vertical",
 		slidesPerView: "auto",
 		freeMode: true,
@@ -27,7 +26,9 @@ export const initializeSwiper = () => {
 			dragSize: 100,
 			draggable: true,
 		},
-		mousewheel: true,
+		mousewheel: {
+			enabled: true,
+		},
 	});
 
 	// Gallery
@@ -59,7 +60,7 @@ export const initializeSwiper = () => {
 			// >= 768px
 			768: {
 				scrollbar: {
-					dragSize: 152, // Размер ползунка для больших экранов
+					dragSize: 152,
 				},
 			},
 			// // < 768px

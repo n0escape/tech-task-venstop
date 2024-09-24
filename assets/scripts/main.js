@@ -1,7 +1,8 @@
-import { initializeSwiper } from './swipers.js';
+import { initializeSwipers } from './swipers.js';
 import { inputDarkLogos } from './hoverDarkLink.js'
 import { langButtonSwitcher } from './langButton.js'
 import { mouseMoveParallax } from './homeMouseMoveParallax.js'
+import { formValidation } from './formValidation.js'
 
 // func of including html which depends on selector of id
 const loadContent = (selectorOrId, url) => {
@@ -15,23 +16,26 @@ const loadContent = (selectorOrId, url) => {
 
 			targetElement.innerHTML = data;
 
-			// checking if there any div with swiper class
+			// checking if there any div with needed class
 			const swiperElements = targetElement.querySelectorAll('.swiper');
-			const parallaxElements = targetElement.querySelectorAll('.banner__content');
+			const headerElements = targetElement.querySelectorAll('.header');
+			const homeElements = targetElement.querySelectorAll('.banner');
+			const newsletterElements = targetElement.querySelectorAll('.newsletter');
 
 			// init Swiper if found div with swiper class
-			if (swiperElements.length > 0) {
-				initializeSwiper();
-			}
+			if (swiperElements.length > 0) initializeSwipers();
 
-			// input dark logos src
-			inputDarkLogos();
+			// init lang button switcher handler when loaded header
+			if (headerElements.length > 0) langButtonSwitcher();
 
-			// lang button switcher handler
-			langButtonSwitcher();
+			// init paralax props when loaded home section
+			if (homeElements.length > 0) mouseMoveParallax();
 
-			if (parallaxElements) mouseMoveParallax()
-			// init paralax props
+			// add validation to inputs in form when loaded newsletter section
+			if (newsletterElements.length > 0) formValidation();
+
+			// input dark logos src when loaded newsletter section
+			if (newsletterElements.length > 0) inputDarkLogos();
 		})
 		.catch(error => console.error(`Error loading ${selectorOrId}:`, error));
 }
@@ -54,11 +58,6 @@ const loadAllContent = () => {
 	const loadPromises = Object.entries(contentToLoad).map(([selectorOrId, url]) =>
 		loadContent(selectorOrId, url)
 	);
-
-	// init swiper after load resources
-	Promise.all(loadPromises).then(() => {
-		initializeSwiper();
-	});
 }
 
 window.addEventListener('DOMContentLoaded', loadAllContent);
