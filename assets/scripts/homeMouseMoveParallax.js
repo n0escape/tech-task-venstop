@@ -3,16 +3,20 @@ export const mouseMoveParallax = () => {
     const parallaxLayers = document.querySelectorAll('.parallax-layer');
 
     if (parallax){
-        parallax.addEventListener('mousemove', (e) => {
+        const moveLayers = (e) => {
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
             parallaxLayers.forEach((layer, index) => {
-                
-                const layerWidth = parallaxLayers[index].width;
                 const speed = layer.getAttribute('data-speed');
-                const xOffset = (e.clientX - window.innerWidth / 2) / speed;
-                const yOffset = (e.clientY - window.innerHeight / 2) / speed;
-                
-                layer.style.transform = `translate(${xOffset}px, ${yOffset}px)`
+                const xOffset = (clientX - window.innerWidth / 2) / speed;
+                const yOffset = (clientY - window.innerHeight / 2) / speed;
+
+                layer.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
             });
-        })
+        };
+
+        parallax.addEventListener('mousemove', moveLayers);
+        parallax.addEventListener('touchmove', moveLayers);
     }
 }
