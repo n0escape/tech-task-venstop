@@ -3,7 +3,7 @@ $pagination-circle-size: 20px;
 $padding-wrapper-bottom: 68px;
 $fixed-padding-wrapper-bottom: $pagination-circle-size + $padding-wrapper-bottom;
 $button-navigation-size: 76px;
-$navigation-sides-offset: -$button-navigation-size / 2;
+$navigation-sides-offset: calc(-1 * $button-navigation-size / 2);
 $padding-gallery-container: 120 - (- $navigation-sides-offset);
 
 .gallery {
@@ -32,7 +32,7 @@ $padding-gallery-container: 120 - (- $navigation-sides-offset);
             @include flex-row;
             align-items: flex-end;
             flex-wrap: wrap;
-            padding: 0 #{$button-navigation-size / 2};
+            padding: 0 calc($button-navigation-size / 2);
     
             & > * {
                 flex: 1;
@@ -210,7 +210,7 @@ $padding-gallery-container: 120 - (- $navigation-sides-offset);
 .container{
     max-width: 100%;
     margin-inline: auto;
-    padding: 0 #{$button-navigation-size / 2};
+    padding: 0 calc($button-navigation-size / 2);
 }
 .swiper-container{
     position: relative;

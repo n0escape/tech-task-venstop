@@ -46,11 +46,6 @@ $checkbox-size: 38px;
                     -moz-transform: translate(-50%, -50%);
                     -ms-transform: translate(-50%, -50%);
                     -o-transform: translate(-50%, -50%);
-                    transition: all .5s;
-                    -webkit-transition: all .5s;
-                    -moz-transition: all .5s;
-                    -ms-transition: all .5s;
-                    -o-transition: all .5s;
                 }
 
                 input {
@@ -74,12 +69,23 @@ $checkbox-size: 38px;
                         -moz-transform: translateY(-170%) translateX(-50%);
                         -ms-transform: translateY(-170%) translateX(-50%);
                         -o-transform: translateY(-170%) translateX(-50%);
-                        transition: transform 1s ease, background 1s ease 0.1s;
-                        -webkit-transition: transform 1s ease, background 1s ease 0.1s;
-                        -moz-transition: transform 1s ease, background 1s ease 0.1s;
-                        -ms-transition: transform 1s ease, background 1s ease 0.1s;
-                        -o-transition: transform 1s ease, background 1s ease 0.1s;
+                        transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+                        -webkit-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+                        -moz-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+                        -ms-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+                        -o-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+                        transition-delay: 0s, 0s, 0s, 1s;
                     }
+
+                    &:not(:focus) ~ label {
+                        width: 100%;
+                        transition: transform 1s ease, background .5s ease, font-size 1s, width 4s ease;
+                        -webkit-transition: transform 1s ease, background .5s ease, font-size 1s, width 4s ease;
+                        -moz-transition: transform 1s ease, background .5s ease, font-size 1s, width 4s ease;
+                        -ms-transition: transform 1s ease, background .5s ease, font-size 1s, width 4s ease;
+                        -o-transition: transform 1s ease, background .5s ease, font-size 1s, width 4s ease;
+                        transition-delay: 0s, 0s, 0s, 1s;
+}
                 }
 
                 input,
@@ -233,9 +239,10 @@ $checkbox-size: 38px;
 
     .newsletter__content__follow-links__wrapper__row_dark {
         img:hover {
-            filter: drop-shadow(0px 0px 50px #A40806);
-            -webkit-filter: drop-shadow(0px 0px 50px #A40806);
-}
+            // changed 50px to 30px for better view
+            filter: drop-shadow(0px 0px 30px #A40806);
+            -webkit-filter: drop-shadow(0px 0px 30px #A40806);
+        }
     }
 }
 
@@ -257,8 +264,9 @@ $checkbox-size: 38px;
 
     .newsletter__content__follow-links__wrapper__row_dark {
         img:active {
-            filter: drop-shadow(0px 0px 50px #A40806);
-            -webkit-filter: drop-shadow(0px 0px 50px #A40806);
+            // changed 50px to 30px for better view
+            filter: drop-shadow(0px 0px 30px #A40806);
+            -webkit-filter: drop-shadow(0px 0px 30px #A40806);
         }
     }
 }

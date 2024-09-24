@@ -27,15 +27,49 @@
             max-width: 500px;
             height: 600px;
 
-            &-item {
+            .swiper-wrapper {
+                transition-duration: .4s !important;
+                transition-timing-function: ease-in-out;
+            }
+
+            &__item {
                 width: 100%;
                 padding: 0 30px;
                 border-left: 4px solid #A40806;
 
-                &-container {
+                &__container {
                     @include flex-column;
                     align-items: flex-start;
                     gap: 20px;
+                }
+            }
+
+            .swiper-scrollbar {
+                --swiper-scrollbar-bg-color: #FFFFFF1A;
+                --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
+                --swiper-scrollbar-size: 4px;
+                --swiper-scrollbar-top: auto;
+        
+                &-drag {
+                transition: all 2s ease !important;
+                -webkit-transition: all 2s ease !important;
+                -moz-transition: all 2s ease !important;
+                -ms-transition: all 2s ease !important;
+                -o-transition: all 2s ease !important;
+                
+                    >.additional-scrollbar {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    filter: blur(2px);
+                    background: rgba(255, 255, 255, 0.5);
+                    -webkit-filter: blur(2px);
+                    transition: all 2s ease !important;
+                    -webkit-transition: all 2s ease !important;
+                    -moz-transition: all 2s ease !important;
+                    -ms-transition: all 2s ease !important;
+                    -o-transition: all 2s ease !important;
+                    }
                 }
             }
         }
@@ -107,26 +141,5 @@
 
     a {
         color: #FFFFFF;
-    }
-
-    .swiper-scrollbar {
-        --swiper-scrollbar-bg-color: #FFFFFF1A;
-        --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
-
-
-        --swiper-scrollbar-size: 4px;
-        --swiper-scrollbar-top: auto;
-        
-        &-drag {
-
-            > .additional-scrollbar {
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                filter: blur(2px);
-                background: rgba(255, 255, 255, 0.5);
-                -webkit-filter: blur(2px);
-}
-        }
     }
 }

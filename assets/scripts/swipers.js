@@ -1,6 +1,7 @@
 export const initializeSwiper = () => {
 	// About
 	const swiperAbout = new Swiper(".about", {
+		speed: 3000,
 		lazy: true,
 		centeredSlides: true,
 		autoplay: {
@@ -15,6 +16,7 @@ export const initializeSwiper = () => {
 
 	// News
 	const swiperNews = new Swiper(".news__content__feed", {
+		// speed: 2000,
 		direction: "vertical",
 		slidesPerView: "auto",
 		freeMode: true,

@@ -33,8 +33,6 @@ header {
 }
 
 h2 {
-    font-family: 'MacPawFixel';
-    font-style: normal;
     font-weight: 700;
     font-size: 75px;
     // height should be 52px but in design 103.5px
@@ -48,6 +46,11 @@ h2 {
     span {
         font-weight: 100;
     }
+}
+
+.swiper-wrapper {
+    transition-duration: 1.2s !important;
+    transition-timing-function: ease-out;
 }
 
 .swiper-pagination {

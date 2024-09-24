@@ -32,8 +32,6 @@ header {
 }
 
 h2 {
-  font-family: "MacPawFixel";
-  font-style: normal;
   font-weight: 700;
   font-size: 75px;
   line-height: 52px;
@@ -44,6 +42,11 @@ h2 {
 }
 h2 span {
   font-weight: 100;
+}
+
+.swiper-wrapper {
+  transition-duration: 1.2s !important;
+  transition-timing-function: ease-out;
 }
 
 .swiper-pagination {
@@ -518,17 +521,47 @@ h2 span {
   max-width: 500px;
   height: 600px;
 }
-.news__content__feed-item {
+.news__content__feed .swiper-wrapper {
+  transition-duration: 0.4s !important;
+  transition-timing-function: ease-in-out;
+}
+.news__content__feed__item {
   width: 100%;
   padding: 0 30px;
   border-left: 4px solid #A40806;
 }
-.news__content__feed-item-container {
+.news__content__feed__item__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-items: flex-start;
   gap: 20px;
+}
+.news__content__feed .swiper-scrollbar {
+  --swiper-scrollbar-bg-color: #FFFFFF1A;
+  --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
+  --swiper-scrollbar-size: 4px;
+  --swiper-scrollbar-top: auto;
+}
+.news__content__feed .swiper-scrollbar-drag {
+  transition: all 2s ease !important;
+  -webkit-transition: all 2s ease !important;
+  -moz-transition: all 2s ease !important;
+  -ms-transition: all 2s ease !important;
+  -o-transition: all 2s ease !important;
+}
+.news__content__feed .swiper-scrollbar-drag > .additional-scrollbar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  filter: blur(2px);
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-filter: blur(2px);
+  transition: all 2s ease !important;
+  -webkit-transition: all 2s ease !important;
+  -moz-transition: all 2s ease !important;
+  -ms-transition: all 2s ease !important;
+  -o-transition: all 2s ease !important;
 }
 .news__date {
   font-weight: 400;
@@ -586,20 +619,6 @@ h2 span {
 }
 .news a {
   color: #FFFFFF;
-}
-.news .swiper-scrollbar {
-  --swiper-scrollbar-bg-color: #FFFFFF1A;
-  --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
-  --swiper-scrollbar-size: 4px;
-  --swiper-scrollbar-top: auto;
-}
-.news .swiper-scrollbar-drag > .additional-scrollbar {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  filter: blur(2px);
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-filter: blur(2px);
 }
 
 .gallery {
@@ -922,11 +941,6 @@ h2 span {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
 }
 .newsletter__content__subscription-form__input-text-group input {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.025) 48.44%, rgba(255, 255, 255, 0) 100%);
@@ -948,11 +962,21 @@ h2 span {
   -moz-transform: translateY(-170%) translateX(-50%);
   -ms-transform: translateY(-170%) translateX(-50%);
   -o-transform: translateY(-170%) translateX(-50%);
-  transition: transform 1s ease, background 1s ease 0.1s;
-  -webkit-transition: transform 1s ease, background 1s ease 0.1s;
-  -moz-transition: transform 1s ease, background 1s ease 0.1s;
-  -ms-transition: transform 1s ease, background 1s ease 0.1s;
-  -o-transition: transform 1s ease, background 1s ease 0.1s;
+  transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+  -webkit-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+  -moz-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+  -ms-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+  -o-transition: transform 1s ease, background 1s ease, font-size 1s, width 3s ease;
+  transition-delay: 0s, 0s, 0s, 1s;
+}
+.newsletter__content__subscription-form__input-text-group input:not(:focus) ~ label {
+  width: 100%;
+  transition: transform 1s ease, background 0.5s ease, font-size 1s, width 4s ease;
+  -webkit-transition: transform 1s ease, background 0.5s ease, font-size 1s, width 4s ease;
+  -moz-transition: transform 1s ease, background 0.5s ease, font-size 1s, width 4s ease;
+  -ms-transition: transform 1s ease, background 0.5s ease, font-size 1s, width 4s ease;
+  -o-transition: transform 1s ease, background 0.5s ease, font-size 1s, width 4s ease;
+  transition-delay: 0s, 0s, 0s, 1s;
 }
 .newsletter__content__subscription-form__input-text-group input,
 .newsletter__content__subscription-form__input-text-group label {
@@ -1089,8 +1113,8 @@ h2 span {
     -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
   }
   .newsletter__content__follow-links__wrapper__row_dark img:hover {
-    filter: drop-shadow(0px 0px 50px #A40806);
-    -webkit-filter: drop-shadow(0px 0px 50px #A40806);
+    filter: drop-shadow(0px 0px 30px #A40806);
+    -webkit-filter: drop-shadow(0px 0px 30px #A40806);
   }
 }
 @media (hover: none) {
@@ -1104,8 +1128,8 @@ h2 span {
     -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
   }
   .newsletter__content__follow-links__wrapper__row_dark img:active {
-    filter: drop-shadow(0px 0px 50px #A40806);
-    -webkit-filter: drop-shadow(0px 0px 50px #A40806);
+    filter: drop-shadow(0px 0px 30px #A40806);
+    -webkit-filter: drop-shadow(0px 0px 30px #A40806);
   }
 }
 
