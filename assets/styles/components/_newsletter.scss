@@ -251,6 +251,8 @@ $checkbox-size: 38px;
                         @include flex-row;
                         width: 100%;
                         justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 16px;
                         list-style-type: none;
                         
                         img {
@@ -363,7 +365,6 @@ $checkbox-size: 38px;
                     gap: 24px;
     
                     &__row {
-                        flex-wrap: wrap;
                         &_bright {
                             img {
                                 max-width: 40px;
@@ -375,6 +376,11 @@ $checkbox-size: 38px;
                                 max-height: 52px;
                                 max-width: 70px;
                             }
+                        }
+
+                        &_bright,
+                        &_dark {
+                            justify-content: center;
                         }
                     }
                 }

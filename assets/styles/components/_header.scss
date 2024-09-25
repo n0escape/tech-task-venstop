@@ -23,15 +23,17 @@
         flex: 0;
         display: none;
         @include size(auto);
+        @include hover-transition;
+        padding: 15px 30px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #A40806;
         cursor: pointer;
-        padding: 10px 30px;
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 25px;
-        border: 2px solid #FFFFFF;
-        color: #F2F3FF;
-        background: rgba(17, 17, 17, 0.4);
-        backdrop-filter: blur(20px);
+        background: rgba(17, 17, 17, 0.5);
+        border: 4px solid #A40806;
+        box-shadow: 0px 1px 50px rgba(0, 0, 0, 0.75);
         @include hover-transition;
     }
 
@@ -140,7 +142,9 @@
 
 @media (hover: hover) {
     .header__menu-button:hover {
-        box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+        background: #A40806;
+        color: #111111;
+        box-shadow: 0px 1px 50px 0px #A40806BF;
     }
 
     .header__nav__list__item__link:hover {
@@ -161,7 +165,9 @@
 
 @media (hover: none) {
     .header__menu-button:active {
-        box-shadow: 0px 0px 30px rgba(164, 8, 6, 0.5);
+        background: #A40806;
+        color: #111111;
+        box-shadow: 0px 1px 50px 0px #A40806BF;
     }
     .header__nav__list__item__link:active {
         font-weight: 700;
@@ -198,9 +204,10 @@
         }
     }
 }
+
 @media screen and (max-width: $mobile) {
     .header {
-        padding: 8px 10px;
+        padding: 8px 20px;
         flex-wrap: wrap;
 
         &__logo {
@@ -230,7 +237,7 @@
 
             &__list {
                 border-top: 1px solid #FFFFFF;
-                padding: 8px 12px;
+                padding: 8px 20px;
                 cursor: pointer;
 
                 &__item {
