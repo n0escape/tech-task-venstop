@@ -81,10 +81,6 @@ h2 span {
     line-height: 100%;
   }
 }
-* {
-  border: 1px solid lightblue;
-}
-
 @font-face {
   font-family: "MacPawFixel";
   src: url(/assets/fonts/MacPawFixel/FixelText-Thin.woff2) format("woff2");
@@ -394,6 +390,12 @@ h2 span {
     display: none;
   }
 }
+@media screen and (max-width: 300px) {
+  .header {
+    justify-content: center;
+    gap: 20px;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -407,7 +409,8 @@ h2 span {
   background: linear-gradient(90deg, rgba(164, 8, 6, 0) 0%, #A40806 46.35%, rgba(164, 8, 6, 0) 100%);
 }
 .footer__rights {
-  height: 13px;
+  text-align: center;
+  width: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -417,6 +420,19 @@ h2 span {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px 48px;
+    gap: 36px;
+  }
+  .footer__rights {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
 .banner {
   background-image: url("/assets/images/backgrounds/home-bg.webp");
   background-size: cover;
