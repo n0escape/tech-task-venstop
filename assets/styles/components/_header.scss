@@ -40,7 +40,8 @@
             @include flex-row;
             justify-content: space-between;
             list-style-type: none;
-            padding: 0;
+            padding: 0 10px;
+            gap: 10px;
 
             &__item {
                 &__link {

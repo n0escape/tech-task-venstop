@@ -101,10 +101,6 @@ $padding-gallery-container: $general-side-padding - (- $navigation-sides-offset)
             h2 {
                 text-align: start;
                 height: auto;
-                
-                span {
-                    text-wrap: nowrap;
-                }
             }
 
             .swiper-pagination-bullet {
@@ -239,6 +235,16 @@ $padding-gallery-container: $general-side-padding - (- $navigation-sides-offset)
         padding: 36px $padding-gallery-container 86px;
         position: relative;
     
+        &__fog_red {
+            width: 240px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+        }
+
         &__switcher {    
             &__header {
                 flex-direction: column;

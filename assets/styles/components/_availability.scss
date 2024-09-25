@@ -27,10 +27,14 @@
     }
 
     &__content {
-        z-index: 10;
+        z-index: 30;
         @include flex-column;
         position: relative;
         gap: 69px;
+
+        h2 {
+            height: auto;
+        }
 
         &__links {
             @include flex-row;
@@ -67,10 +71,33 @@
 
 @media screen and (max-width: $tablet) {
     .availability {
-        padding: 0
+        margin-top: 0;
+        padding: 44px 60px 82px;
+
+        &__content {    
+            &__links {
+                gap: 40px;
+    
+                img {
+                    height: 80px;
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: $mobile) {
-    
+    .availability {
+        &__content {
+            gap: 44px;
+
+            &__links {
+                gap: 20px;
+
+                img {
+                    height: 60px;
+                }
+            }
+        }
+    }
 }
