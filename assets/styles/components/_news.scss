@@ -15,17 +15,27 @@
         }
 
         &__latest {
-            max-width: 100%;
+            @include flex-column;
+            position: relative;
+            gap: 30px;
+            @include size(100%);
+
             img {
                 width: 100%;
                 max-width: 580px;
             }
+
+            &__details {
+                @include flex-column;
+                align-items: start;
+                gap: 30px;
+            }
         }
 
         &__feed {
-            width: 100%;
+            @include size(100%);
             max-width: 500px;
-            height: 600px;
+            max-height: 600px;
 
             .swiper-wrapper {
                 transition-duration: .4s !important;
@@ -89,18 +99,16 @@
     }
 
     &__subtitle {
-        height: 24px;
+        // height: 24px;
         font-weight: 700;
         font-size: 35px;
         line-height: 100%;
-        /* or 35px */
         leading-trim: both;
         text-edge: cap;
 
         &-latest {
             height: 76px;
             font-size: 45px;
-            /* or 45px */
             leading-trim: both;
             text-edge: cap;
             letter-spacing: 0.02em;
@@ -112,7 +120,6 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 125%;
-        /* or 22px */
         leading-trim: both;
         text-edge: cap;
 
@@ -128,7 +135,6 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 100%;
-        /* identical to box height, or 18px */
         text-decoration-line: underline;
     }
 
@@ -142,5 +148,46 @@
 
     a {
         color: #FFFFFF;
+    }
+}
+
+
+@media screen and (max-width: $tablet) {
+    .news {
+        gap: 40px;
+        padding: 106px 60px 60px;
+        background-position: right;
+        
+        &__content {
+            gap: 60px;
+
+            &__latest {
+                &__details {
+                    gap: 20px;
+                }
+            }
+        }
+
+        &__subtitle {    
+            &-latest {
+                height: auto;
+                font-size: 35px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: $mobile) {
+    .news {
+        &__content {
+            flex-direction: column;
+
+            &__latest {
+                &__details {
+                    gap: 10px;
+                }
+            }
+        }
     }
 }

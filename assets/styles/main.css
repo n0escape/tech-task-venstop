@@ -67,6 +67,19 @@ h2 span {
   background: rgba(217, 217, 217, 0.5);
 }
 
+@media screen and (max-width: 1024px) {
+  h2 {
+    height: auto;
+    font-size: 57px;
+    line-height: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 38px;
+    line-height: 100%;
+  }
+}
 @font-face {
   font-family: "MacPawFixel";
   src: url(/assets/fonts/MacPawFixel/FixelText-Thin.woff2) format("woff2");
@@ -572,14 +585,14 @@ h2 span {
   line-height: 25px;
 }
 .about__wrapper__slide__content h3, .about__wrapper__slide__content p {
-  padding: 0 120px 0 0;
+  padding: 0 0 0 120px;
   position: absolute;
   color: #FFFFFF;
 }
 .about__wrapper__slide:nth-child(even) {
   justify-content: flex-end;
 }
-.about__wrapper__slide:nth-child(even) .about__wrapper__slide__content__slogan h3, .about__wrapper__slide:nth-child(even) .about__wrapper__slide__content__slogan p {
+.about__wrapper__slide:nth-child(even) .about__wrapper__slide__content h3, .about__wrapper__slide:nth-child(even) .about__wrapper__slide__content p {
   padding: 0 120px 0 0;
 }
 .about__wrapper__slide:nth-child(1) {
@@ -652,16 +665,30 @@ h2 span {
   flex: 1;
 }
 .news__content__latest {
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
 }
 .news__content__latest img {
   width: 100%;
   max-width: 580px;
 }
+.news__content__latest__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: start;
+  gap: 30px;
+}
 .news__content__feed {
   width: 100%;
+  height: 100%;
   max-width: 500px;
-  height: 600px;
+  max-height: 600px;
 }
 .news__content__feed .swiper-wrapper {
   transition-duration: 0.4s !important;
@@ -719,18 +746,15 @@ h2 span {
   gap: 30px;
 }
 .news__subtitle {
-  height: 24px;
   font-weight: 700;
   font-size: 35px;
   line-height: 100%;
-  /* or 35px */
   leading-trim: both;
   text-edge: cap;
 }
 .news__subtitle-latest {
   height: 76px;
   font-size: 45px;
-  /* or 45px */
   leading-trim: both;
   text-edge: cap;
   letter-spacing: 0.02em;
@@ -740,7 +764,6 @@ h2 span {
   font-weight: 400;
   font-size: 18px;
   line-height: 125%;
-  /* or 22px */
   leading-trim: both;
   text-edge: cap;
   display: -webkit-box;
@@ -753,7 +776,6 @@ h2 span {
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
-  /* identical to box height, or 18px */
   text-decoration-line: underline;
 }
 .news h2 {
@@ -766,6 +788,31 @@ h2 span {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 1024px) {
+  .news {
+    gap: 40px;
+    padding: 106px 60px 60px;
+    background-position: right;
+  }
+  .news__content {
+    gap: 60px;
+  }
+  .news__content__latest__details {
+    gap: 20px;
+  }
+  .news__subtitle-latest {
+    height: auto;
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .news__content {
+    flex-direction: column;
+  }
+  .news__content__latest__details {
+    gap: 10px;
+  }
+}
 .gallery {
   background-color: #111111;
   padding: 110px 82px 86px;
@@ -1024,6 +1071,11 @@ h2 span {
     -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
   }
 }
+@media screen and (max-width: 1024px) {
+  .availability {
+    padding: 0;
+  }
+}
 .newsletter {
   position: relative;
 }
@@ -1070,6 +1122,7 @@ h2 span {
 }
 .newsletter__content__subscription-form__input-text-group label {
   position: absolute;
+  text-wrap: wrap;
   top: 50%;
   left: 50%;
   width: 100%;
@@ -1162,7 +1215,7 @@ h2 span {
   -o-transform: translate(-50%, -50%) rotate(45deg);
 }
 .newsletter__content__subscription-form__privacy-policy label {
-  height: 38px;
+  height: auto;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -1221,6 +1274,7 @@ h2 span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 113px;
   width: 100%;
   max-width: 600px;

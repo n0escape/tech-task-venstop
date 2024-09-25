@@ -75,3 +75,18 @@ h2 {
         background: rgba(217, 217, 217, 0.5);
     }
 }
+
+@media screen and (max-width: $tablet) {
+    h2 {
+        height: auto;
+        font-size: 57px;
+        line-height: 70%;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    h2 {
+        font-size: 38px;
+        line-height: 100%;
+    }
+}

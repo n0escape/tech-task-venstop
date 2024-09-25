@@ -55,7 +55,7 @@ $fixed-gap-text-line: $line-height + $gap-text-line * 2;
 
                 h3, p {
                     // position changing in js
-                    padding: 0 120px 0 0;
+                    padding: 0 0 0 120px;
                     position: absolute;
                     color: #FFFFFF;
                 }
@@ -64,10 +64,8 @@ $fixed-gap-text-line: $line-height + $gap-text-line * 2;
             &:nth-child(even) {
                 justify-content: flex-end;
                 .about__wrapper__slide__content {
-                    &__slogan {
-                        h3, p {
-                            padding: 0 120px 0 0;
-                        }
+                    h3, p {
+                        padding: 0 120px 0 0;
                     }
                 }
             }
@@ -120,6 +118,7 @@ $fixed-gap-text-line: $line-height + $gap-text-line * 2;
         }
     }
 }
+
 @media screen and (max-width: $mobile) {
     .about {
         &__wrapper {    
