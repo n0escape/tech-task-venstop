@@ -1,3 +1,7 @@
+$line-height: 8px;
+$gap-text-line: 20px;
+$fixed-gap-text-line: $line-height + $gap-text-line * 2;
+
 .about {
     width: 100%;
     height: 570px; /* или любое другое значение */
@@ -15,11 +19,24 @@
             text-align: start;
 
             &__content {
-                @include flex-column;
                 text-wrap: wrap;
                 height: 100%;
                 width: 50%;
-                padding-top: 124px;
+                position: relative;
+
+                &__line {
+                    position: absolute;
+                    height: $line-height;
+                    width: 100%;
+                    border: none;
+                    background: #A40806;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                }  
 
                 h3 {
                     text-wrap: wrap;
@@ -30,13 +47,6 @@
                     /* or 84px */
                 }
 
-                &__line {
-                    height: 8px;
-                    width: 100%;
-                    border: none;
-                    background: #A40806;
-                }
-
                 p {
                     font-weight: 500;
                     font-size: 18px;
@@ -44,17 +54,20 @@
                 }
 
                 h3, p {
-                    margin: 0;
-                    padding: 0 0 0 120px;
+                    // position changing in js
+                    padding: 0 120px 0 0;
+                    position: absolute;
                     color: #FFFFFF;
                 }
             }
 
             &:nth-child(even) {
                 justify-content: flex-end;
-                .about__wrapper__slide-content {
-                    h3, p {
-                        padding: 0 120px 0 0;
+                .about__wrapper__slide__content {
+                    &__slogan {
+                        h3, p {
+                            padding: 0 120px 0 0;
+                        }
                     }
                 }
             }
@@ -69,6 +82,62 @@
         
             &:nth-child(3) {
                 @include bg-image("/assets/images/backgrounds/about-bg-3.webp")
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $tablet) {
+    .about {
+        --swiper-pagination-bottom: 0;
+
+        &__wrapper {
+            &__slide {
+                &__content {
+                    h3 {
+                        font-size: 48px;
+                    }
+    
+                    p {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    h3, p {
+                        padding: 0 0 0 60px;
+                    }
+                }
+
+                &:nth-child(even) {
+                    .about__wrapper__slide__content {
+                        h3, p {
+                            padding: 0 60px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .about {
+        &__wrapper {    
+            &__slide {
+                &__content {
+                    gap: 12px;
+                    width: 100%;
+
+                    h3 {
+                        font-size: 28px;
+                    }
+
+                    h3, p {
+                        width: 100%;
+                        text-align: center;                
+                        padding: 0 12px;
+                    }
+                }
             }
         }
     }

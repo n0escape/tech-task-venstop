@@ -4,6 +4,7 @@ import { langButtonSwitcher } from './langButton.js'
 import { mouseMoveParallax } from './homeMouseMoveParallax.js'
 import { formValidation } from './formValidation.js'
 import { menuHandler } from './menuHandler.js'
+import { posAboutText } from './posAboutText.js'
 
 // func of including html which depends on selector of id
 const loadContent = (selectorOrId, url) => {
@@ -21,6 +22,7 @@ const loadContent = (selectorOrId, url) => {
 			const swiperElements = targetElement.querySelectorAll('.swiper');
 			const headerElements = targetElement.querySelectorAll('.header');
 			const homeElements = targetElement.querySelectorAll('.banner');
+			const aboutElemets = targetElement.querySelectorAll('.about');
 			const newsletterElements = targetElement.querySelectorAll('.newsletter');
 
 			// init Swiper if found div with swiper class
@@ -34,6 +36,9 @@ const loadContent = (selectorOrId, url) => {
 
 			// init paralax props when loaded home section
 			if (homeElements.length > 0) mouseMoveParallax();
+
+			// init pos of text elements relatively to the line when loaded about section
+			if (aboutElemets.length > 0) posAboutText()
 
 			// add validation to inputs in form when loaded newsletter section
 			if (newsletterElements.length > 0) formValidation();
