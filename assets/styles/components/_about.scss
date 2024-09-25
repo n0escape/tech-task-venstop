@@ -137,6 +137,14 @@ $fixed-gap-text-line: $line-height + $gap-text-line * 2;
                         padding: 0 12px;
                     }
                 }
+
+                &:nth-child(even) {
+                    .about__wrapper__slide__content {
+                        h3, p {
+                            padding: 0 12px;
+                        }
+                    }
+                }
             }
         }
     }

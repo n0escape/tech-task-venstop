@@ -3,7 +3,7 @@ export const formValidation = () => {
     const nameInput = document.getElementById('input-name');
     const emailInput = document.getElementById('input-email');
     const termsCheckbox = document.getElementById('inpit-privacy');
-    const errorMessage = document.getElementById('form-error-message');
+    const errorMessage = document.querySelector('.form-error-message');
     const namePattern = /^[a-zA-Z]+$/;
     const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
 
@@ -35,8 +35,8 @@ export const formValidation = () => {
         })
 
         const clearErrorMessage = () => {
-            errorMessage.textContent = '';
-            errorMessage.classList.remove('alert');
+                errorMessage.textContent = '';
+                errorMessage.classList.remove('alert');
         };
     
         // clear message box if making changes
