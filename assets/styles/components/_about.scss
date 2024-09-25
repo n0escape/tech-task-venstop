@@ -4,8 +4,8 @@ $fixed-gap-text-line: $line-height + $gap-text-line * 2;
 
 .about {
     width: 100%;
-    height: 570px; /* или любое другое значение */
-    position: relative; /* важно для правильного позиционирования */
+    height: 570px;
+    position: relative;
     overflow: hidden;
     --swiper-pagination-bottom: 40px;
     
@@ -121,6 +121,8 @@ $fixed-gap-text-line: $line-height + $gap-text-line * 2;
 
 @media screen and (max-width: $mobile) {
     .about {
+        height: 360px;
+
         &__wrapper {    
             &__slide {
                 &__content {

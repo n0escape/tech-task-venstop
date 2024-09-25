@@ -264,6 +264,13 @@
                     font-size: 14px;
                     line-height: 20px;
                 }
+                &__dropdown {    
+                    &__option {
+                        border-top: 1px solid #FFFFFF;
+                        padding: 4px 16px;
+                        cursor: pointer;
+                    }
+                }
             }
             
             &__buy-now {
