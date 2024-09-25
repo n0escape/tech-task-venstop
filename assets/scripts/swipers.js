@@ -4,10 +4,10 @@ export const initializeSwipers = () => {
 		speed: 3000,
 		lazy: true,
 		centeredSlides: true,
-		// autoplay: {
-		//     delay: 2000,
-		//     disableOnInteraction: false,
-		// },
+		autoplay: {
+		    delay: 2000,
+		    disableOnInteraction: false,
+		},
 		pagination: {
 			el: ".about__pagination",
 			clickable: true,
@@ -57,18 +57,12 @@ export const initializeSwipers = () => {
 			draggable: true,
 		},
 		breakpoints: {
-			// >= 768px
-			768: {
+			// >= 600px
+			600: {
 				scrollbar: {
 					dragSize: 152,
 				},
 			},
-			// // < 768px
-			// 0: {
-			//   scrollbar: {
-			//     dragSize: 48, // Размер ползунка для мобильных
-			//   },
-			// },
 		}
 	});
 
@@ -76,7 +70,6 @@ export const initializeSwipers = () => {
 	const swiperGalleryInnerSetup = {
 		rewind: true,
 		lazy: true,
-		slidesPerView: 1,
 		spaceBetween: 40,
 		freeModeMomentum: true,
 		keyboard: {
@@ -94,7 +87,13 @@ export const initializeSwipers = () => {
 
 	const swiperGalleryInnerPhotos = new Swiper(".photos", {
 		...swiperGalleryInnerSetup,
-		slidesPerView: 2,
+		slidesPerView: 1,
+		breakpoints: {
+			// >= 600px
+			600: {
+				slidesPerView: 2,
+			},
+		}
 	});
 	const swiperGalleryInnerVideos = new Swiper(".videos", {
 		...swiperGalleryInnerSetup,

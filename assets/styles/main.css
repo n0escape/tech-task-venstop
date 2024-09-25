@@ -35,7 +35,7 @@ h2 {
   height: 52px;
   font-weight: 700;
   font-size: 75px;
-  line-height: 52px;
+  line-height: 103px;
   leading-trim: both;
   text-edge: cap;
   text-align: center;
@@ -71,7 +71,7 @@ h2 span {
   h2 {
     height: auto;
     font-size: 57px;
-    line-height: 70%;
+    line-height: 100%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -898,6 +898,10 @@ h2 span {
 }
 .gallery__switcher__header h2 {
   text-align: start;
+  height: auto;
+}
+.gallery__switcher__header h2 span {
+  text-wrap: nowrap;
 }
 .gallery__switcher__header .swiper-pagination-bullet {
   width: auto;
@@ -944,8 +948,8 @@ h2 span {
   align-items: center;
 }
 .gallery__switcher__wrapper__slide__container__inner > .swiper-wrapper .swiper-slide video {
-  height: 337px;
-  width: auto;
+  max-height: 100%;
+  width: 100%;
 }
 .gallery__switcher__wrapper__slide__container__inner__button-navigation {
   display: flex;
@@ -1006,6 +1010,52 @@ h2 span {
   background-position: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .gallery {
+    background-color: #111111;
+    padding: 36px 22px 86px;
+    position: relative;
+  }
+  .gallery__switcher__header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery__switcher__header > * {
+    width: 100%;
+  }
+  .gallery__switcher__header h2 {
+    text-align: center;
+  }
+  .gallery__switcher__wrapper__slide__container {
+    padding: 0 38px;
+  }
+  .gallery__switcher__wrapper__slide__container__inner {
+    --swiper-navigation-sides-offset: -38px;
+  }
+  .gallery__switcher__wrapper__slide__container__inner__fog_black-sides {
+    width: calc(100% - 76px);
+    height: calc(100% - 62px);
+  }
+  .gallery__switcher__wrapper__slide__container__inner > .swiper-wrapper {
+    padding-bottom: 62px;
+  }
+  .gallery__switcher__wrapper__slide__container__inner > .swiper-wrapper .swiper-slide {
+    height: 337px;
+    width: auto;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery__switcher__wrapper__slide__container__inner > .swiper-wrapper .swiper-slide video {
+    max-height: 100%;
+    width: 100%;
+  }
+  .gallery__switcher__wrapper__slide__container__inner__button-navigation {
+    width: calc(100% - 76px);
+    height: calc(100% - 62px);
+  }
+}
 .availability {
   width: 100%;
   margin-top: -34px;
