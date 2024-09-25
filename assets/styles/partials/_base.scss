@@ -36,7 +36,7 @@ header {
 }
 
 h2 {
-    height: 52px;
+    // height: 52px;
     font-weight: 700;
     font-size: 75px;
     // height should be 52px but in design 103.5px
@@ -87,6 +87,7 @@ h2 {
 
 @media screen and (max-width: $mobile) {
     h2 {
+        height: auto;
         font-size: 38px;
         line-height: 100%;
     }

@@ -32,7 +32,6 @@ header {
 }
 
 h2 {
-  height: 52px;
   font-weight: 700;
   font-size: 75px;
   line-height: 103px;
@@ -77,6 +76,7 @@ h2 span {
 }
 @media screen and (max-width: 600px) {
   h2 {
+    height: auto;
     font-size: 38px;
     line-height: 100%;
   }
@@ -1233,7 +1233,6 @@ h2 span {
 }
 .newsletter__content__subscription-form__input-text-group label {
   position: absolute;
-  text-wrap: wrap;
   top: 50%;
   left: 50%;
   width: 100%;
@@ -1342,6 +1341,7 @@ h2 span {
   color: #A40806;
 }
 .newsletter__content__subscription-form .form-error-message {
+  text-align: center;
   color: #FCFBF9;
   font-weight: 400;
   font-size: 18px;
@@ -1479,8 +1479,13 @@ h2 span {
   .newsletter__content {
     padding: 24px 60px 40px;
   }
+  .newsletter__content__subscription-form__input-text-group label {
+    padding: 29px 16px;
+    width: 100%;
+  }
   .newsletter__content__subscription-form__input-text-group input:not(:placeholder-shown) ~ label, .newsletter__content__subscription-form__input-text-group input:focus ~ label {
     letter-spacing: initial;
+    width: 100%;
     transform: translateY(-200%) translateX(-50%);
     -webkit-transform: translateY(-200%) translateX(-50%);
     -moz-transform: translateY(-200%) translateX(-50%);

@@ -37,7 +37,7 @@ $checkbox-size: 38px;
 
                 label {
                     position: absolute;
-                    text-wrap: wrap;
+                    // text-wrap: wrap;
                     top: 50%;
                     left: 50%;
                     width: 100%;
@@ -163,6 +163,7 @@ $checkbox-size: 38px;
             }
             
             .form-error-message {
+                text-align: center;
                 color: #FCFBF9;
                 //height: 38px;
                 font-weight: 400;
@@ -330,10 +331,16 @@ $checkbox-size: 38px;
 
             &__subscription-form {
                 &__input-text-group {
+                    label {   
+                        padding: 29px 16px;
+                        width: 100%;
+                    }
+
                     input {
                         &:not(:placeholder-shown) ~ label,
                         &:focus ~ label {
                             letter-spacing: initial;
+                            width: 100%;
                             transform: translateY(-200%) translateX(-50%);
                             -webkit-transform: translateY(-200%) translateX(-50%);
                             -moz-transform: translateY(-200%) translateX(-50%);
