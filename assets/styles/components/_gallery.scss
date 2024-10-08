@@ -202,16 +202,16 @@ $padding-gallery-container: $general-side-padding - (- $navigation-sides-offset)
             
                     & .photos {
                         .swiper-slide:nth-child(1) {
-                            @include bg-image("../assets/images/content/gallety_photo 1.png");
+                            @include bg-image("../../assets/images/content/gallety_photo 1.png");
                         }
                         .swiper-slide:nth-child(2) {
-                            @include bg-image("../assets/images/content/gallety_photo 2.png");
+                            @include bg-image("../../../assets/images/content/gallety_photo 2.png");
                         }
                         .swiper-slide:nth-child(3) {
-                            @include bg-image("../assets/images/content/gallety_photo 1.png");
+                            @include bg-image("../../../assets/images/content/gallety_photo 1.png");
                         }
                         .swiper-slide:nth-child(4) {
-                            @include bg-image("../assets/images/content/gallety_photo 2.png");
+                            @include bg-image("../../../assets/images/content/gallety_photo 2.png");
                         }
                     }
                 }

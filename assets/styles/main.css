@@ -82,55 +82,55 @@ h2 span {
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-Thin.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-ExtraLight.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-Light.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-Regular.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-Medium.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-SemiBold.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-Bold.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-ExtraBold.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "MacPawFixel";
-  src: url(assets/fonts/MacPawFixel/FixelText-Black.woff2) format("woff2");
+  src: url("../../../assets/fonts/MacPawFixel/FixelText-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -438,7 +438,7 @@ h2 span {
   }
 }
 .banner {
-  background-image: url("../assets/images/backgrounds/home-bg.webp");
+  background-image: url("../../../assets/images/backgrounds/home-bg.webp");
   background-size: cover;
   background-position: center;
   height: 720px;
@@ -632,17 +632,17 @@ h2 span {
   padding: 0 120px 0 0;
 }
 .about__wrapper__slide:nth-child(1) {
-  background-image: url("../assets/images/backgrounds/about-bg-1.webp");
+  background-image: url("../../../assets/images/backgrounds/about-bg-1.webp");
   background-size: cover;
   background-position: center;
 }
 .about__wrapper__slide:nth-child(2) {
-  background-image: url("../assets/images/backgrounds/about-bg-2.webp");
+  background-image: url("../../../assets/images/backgrounds/about-bg-2.webp");
   background-size: cover;
   background-position: center;
 }
 .about__wrapper__slide:nth-child(3) {
-  background-image: url("../assets/images/backgrounds/about-bg-3.webp");
+  background-image: url("../../../assets/images/backgrounds/about-bg-3.webp");
   background-size: cover;
   background-position: center;
 }
@@ -686,7 +686,7 @@ h2 span {
   }
 }
 .news {
-  background-image: url("../assets/images/backgrounds/news-bg.webp");
+  background-image: url("../../../assets/images/backgrounds/news-bg.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1028,22 +1028,22 @@ h2 span {
   bottom: 0px !important;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(1) {
-  background-image: url("../assets/images/content/gallety_photo 1.png");
+  background-image: url("../../assets/images/content/gallety_photo 1.png");
   background-size: cover;
   background-position: center;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(2) {
-  background-image: url("../assets/images/content/gallety_photo 2.png");
+  background-image: url("../../../assets/images/content/gallety_photo 2.png");
   background-size: cover;
   background-position: center;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(3) {
-  background-image: url("../assets/images/content/gallety_photo 1.png");
+  background-image: url("../../../assets/images/content/gallety_photo 1.png");
   background-size: cover;
   background-position: center;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(4) {
-  background-image: url("../assets/images/content/gallety_photo 2.png");
+  background-image: url("../../../assets/images/content/gallety_photo 2.png");
   background-size: cover;
   background-position: center;
 }
@@ -1108,7 +1108,7 @@ h2 span {
   margin-top: -34px;
   position: relative;
   padding: 89px 275px 161px;
-  background-image: url("../assets/images/backgrounds/availability-bg.webp");
+  background-image: url("../../../assets/images/backgrounds/availability-bg.webp");
   background-size: cover;
   background-position: center;
 }
