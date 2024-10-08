@@ -3,7 +3,7 @@
     margin-top: -34px;
     position: relative;
     padding: 89px 275px 161px;
-    @include bg-image("/assets/images/backgrounds/availability-bg.webp");
+    @include bg-image("assets/images/backgrounds/availability-bg.webp");
 
     &__fog_top {
         position: absolute;

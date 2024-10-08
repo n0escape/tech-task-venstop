@@ -438,7 +438,7 @@ h2 span {
   }
 }
 .banner {
-  background-image: url("/assets/images/backgrounds/home-bg.webp");
+  background-image: url("assets/images/backgrounds/home-bg.webp");
   background-size: cover;
   background-position: center;
   height: 720px;
@@ -632,17 +632,17 @@ h2 span {
   padding: 0 120px 0 0;
 }
 .about__wrapper__slide:nth-child(1) {
-  background-image: url("/assets/images/backgrounds/about-bg-1.webp");
+  background-image: url("assets/images/backgrounds/about-bg-1.webp");
   background-size: cover;
   background-position: center;
 }
 .about__wrapper__slide:nth-child(2) {
-  background-image: url("/assets/images/backgrounds/about-bg-2.webp");
+  background-image: url("assets/images/backgrounds/about-bg-2.webp");
   background-size: cover;
   background-position: center;
 }
 .about__wrapper__slide:nth-child(3) {
-  background-image: url("/assets/images/backgrounds/about-bg-3.webp");
+  background-image: url("assets/images/backgrounds/about-bg-3.webp");
   background-size: cover;
   background-position: center;
 }
@@ -686,7 +686,7 @@ h2 span {
   }
 }
 .news {
-  background-image: url("/assets/images/backgrounds/news-bg.webp");
+  background-image: url("assets/images/backgrounds/news-bg.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1028,22 +1028,22 @@ h2 span {
   bottom: 0px !important;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(1) {
-  background-image: url("/assets/images/content/gallety_photo 1.png");
+  background-image: url("assets/images/content/gallety_photo 1.png");
   background-size: cover;
   background-position: center;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(2) {
-  background-image: url("/assets/images/content/gallety_photo 2.png");
+  background-image: url("assets/images/content/gallety_photo 2.png");
   background-size: cover;
   background-position: center;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(3) {
-  background-image: url("/assets/images/content/gallety_photo 1.png");
+  background-image: url("assets/images/content/gallety_photo 1.png");
   background-size: cover;
   background-position: center;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(4) {
-  background-image: url("/assets/images/content/gallety_photo 2.png");
+  background-image: url("assets/images/content/gallety_photo 2.png");
   background-size: cover;
   background-position: center;
 }
@@ -1108,7 +1108,7 @@ h2 span {
   margin-top: -34px;
   position: relative;
   padding: 89px 275px 161px;
-  background-image: url("/assets/images/backgrounds/availability-bg.webp");
+  background-image: url("assets/images/backgrounds/availability-bg.webp");
   background-size: cover;
   background-position: center;
 }
