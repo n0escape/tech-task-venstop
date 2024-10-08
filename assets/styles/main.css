@@ -1028,7 +1028,7 @@ h2 span {
   bottom: 0px !important;
 }
 .gallery__switcher__wrapper__slide__container .photos .swiper-slide:nth-child(1) {
-  background-image: url("../assets/images/content/gallety_photo 1.png");
+  background-image: url("../../assets/images/content/gallety_photo 1.png");
   background-size: cover;
   background-position: center;
 }
