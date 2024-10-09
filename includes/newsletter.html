@@ -2,10 +2,12 @@
     <div class="newsletter__fog_red"></div>
     <div class="newsletter__content">
         <h2>NEWSLETTER &#9679; <span>通讯</span></h2>
+        <!--
+            method="POST"
+            action="./send_email.php" 
+        -->
         <form class="newsletter__content__subscription-form"
             id="subscription-form"
-            action="./send_email.php" 
-            method="POST"
             novalidate
         >
             <div class="newsletter__content__subscription-form__input-text-group">
@@ -30,7 +32,7 @@
                 </label>
             </div>
             <p class="form-error-message"></p>
-            <button type="submit">subscribe</button>
+            <button type="submit" onclick="alert('Form currently disabled because of without php hosting')">subscribe</button>
         </form>
         <div class="newsletter__content__follow-links">
             <h3>FOLLOW US</h3>
